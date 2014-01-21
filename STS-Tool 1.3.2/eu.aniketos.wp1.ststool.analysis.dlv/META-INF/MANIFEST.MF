@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: STS-Tool Analyisis Support
+Bundle-SymbolicName: eu.aniketos.wp1.ststool.analysis.dlv;singleton:=true
+Bundle-Version: 1.3.2
+Bundle-Activator: eu.aniketos.wp1.ststool.analysis.dlv.Activator
+Bundle-Vendor: disi.unitn.it
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.expressions,
+ org.eclipse.draw2d;bundle-version="3.7.2",
+ eu.aniketos.wp1.ststool.diagram,
+ org.eclipse.emf.common,
+ org.eclipse.emf.transaction,
+ eu.aniketos.wp1.ststool.emfModel,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor,
+ eu.aniketos.wp1.ststool.analysis
+Bundle-ActivationPolicy: lazy
+Export-Package: eu.aniketos.wp1.ststool.analysis.dlv.parser,
+ eu.aniketos.wp1.ststool.analysis.dlv.parser.STSpredicate,
+ eu.aniketos.wp1.ststool.analysis.dlv.utils,
+ eu.aniketos.wp1.ststool.analysis.dlv.wrapper
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

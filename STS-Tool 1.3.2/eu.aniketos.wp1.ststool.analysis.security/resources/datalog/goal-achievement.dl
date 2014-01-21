@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 	Goal achievement		%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%capable_of(R,G). %%% leaf goals only
+ 
+%%% propagate capabilities from leaf goals to higher level goals 
+can_do(R,G) :- not and_dec(R,G), not or_dec(R,G), capable_of(R,G). %%% G not decomposed, or leaf goal 
+can_do(R,G) :- or_dec(R,G), isRefined(R,G,Ga), has(R,Ga), can_do(R,Ga).    %%% here should specify that is for at least one Ga not every Ga
+can_do(R,G) :- and_dec(R,G), isRefined(R,G,Ga), has(R,Ga), can_do(R,Ga). %%% here: for all Ga, so should be ok this way
+ 
+can_achieve(R,G) :- has(R,G), capable_of(R,G).
+can_achieve(R,G) :- has(R,G), can_do(R,G).
+
+%should_achieve(R,G) :- has(R,G). %%%, can_achieve(R,G). %%% not really related to capabilities!!! more related to commitments!!!
+%should_achieve(R1,G) :- should_achieve(R,G), delegated(R,R1,G), accepted(R1,G).
+%should_achieve(R,G) :- should_achieve(R,G), subgoal(G1,G,R).
+
+%%% goal achievement within an actor's rationale 
+achieved(R,G) :- not and_dec(R,G), not or_dec(R,G), can_achieve(R,G). %, did(R,G). %%%G is not decomposed
+achieved(R,G) :- or_dec(R,G), 1>=#count{Ga : isRefined(R,G,Ga),has(R,Ga)}. %,achieved(R,Ga). 
+achieved(R,G) :- and_dec(R,G), isRefined(R,G,Ga), achieved(R,Ga).
+
+%%% achievement by actor or delegatee
+%discharged(R,G) :- achieved(R,G).
+%discharged(R,G) :- delegated(R,R1,G), accepted(R1,G), achieved(R1,G).
+%discharged(R,G) :- or_dec(R,G), isRefined(R,G,Ga), achieved(R,Ga).
+%discharged(R,G) :- and_dec(R,G), isRefined(R,G,Ga), achieved(R,Ga).
+%%% perhaps could rewrite this to merge with achieved, to avoid having too many predicates 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Import threats from the Threat Repository to events in the diagram"
+            id="addthreats"
+            name="Import threat events">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="eu.aniketos.wp1.ststool.threats.ThreatRepositoryHandler"
+            commandId="addthreats">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="eu.aniketos.wp1.ststool.threats.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="eu.aniketos.wp1.ststool.threats.preferences.ProxyPreferencePage"
+            id="eu.aniketos.wp1.ststool.threats.proxy"
+            name="Proxy">
+      </page>
+   </extension>
+</plugin>

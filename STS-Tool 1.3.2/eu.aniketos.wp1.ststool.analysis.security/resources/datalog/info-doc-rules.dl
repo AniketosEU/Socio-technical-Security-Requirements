@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% info-document rules %%%%%%%%%%%%%%%%
+%%%%  Define relations related to information and operations that 
+%%%%  can be performed over documents that represent information	 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% to capture that D has been drawn within the scope of R and since it is neither produced 
+%%% nor provided by someone to R, it possesses D since the beginning  
+possess(R,D) :- has_in_scope(R,D), 0=#count{G: produce(R,D,G)}, 0=#count{R1: can_provide(R1,R,D)}. 
+
+possess(R,D) :- produce(R,D,G), has(R,G). %%% actor that produces a document possesses it 
+
+provided(R1,R2,D) :- possess(R1,D), can_provide(R1,R2,D), R1 != R2.
+
+%%% provision causes the providee to possess the document afterwards %%%%%%%%
+possess(R2,D) :- provided(_,R2,D).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	information related 	%%%%%%%%%%%%%%%%%%%%%
+%madeTangibleBy(I1,D) :- madeTangibleBy(I,D), partOfI(I1,I).
+%madeTangibleBy(I,D) :- madeTangibleBy(I,D1), partOfD(D1,D).
+
+own(R,I1) :- own(R,I), partOfI(I1,I).

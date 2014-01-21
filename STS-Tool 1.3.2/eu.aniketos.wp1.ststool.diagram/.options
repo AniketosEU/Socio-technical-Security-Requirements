@@ -1,0 +1,7 @@
+# Tracing options for the eu.aniketos.wp1.ststool.diagram plug-in
+
+# Common issues
+eu.aniketos.wp1.ststool.diagram/debug=false
+
+# Visual IDs
+eu.aniketos.wp1.ststool.diagram/debug/visualID=false

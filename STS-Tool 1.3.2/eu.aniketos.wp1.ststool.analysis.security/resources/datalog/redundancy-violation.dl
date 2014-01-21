@@ -1,0 +1,24 @@
+%%%	Redundancy violation 	%%%%
+
+% redundancy over G is propagated to subgoals Gi when G and-dec
+single_red(R1,R2,Gi) :- single_red(R1,R2,G), has(R2,G), and_dec(R2,G), isRefined(R2,G,Gi).
+multi_red(R1,R2,Gi) :- multi_red(R1,R2,G), has(R2,G), and_dec(R2,G), isRefined(R2,G,Gi).
+
+
+% both types of redundancy are violated if the goal is not decomposed, or if and-dec and no subgoals are decomposed
+violation_rs(R2,R1,G) :- single_red(R1,R2,G), has(R2,G), 0=#count{Gi:subgoal(Gi,G,R2)}. %not decomposed at all
+% violation_rs(R2,R1,G) :- single_red(R1,R2,G), has(R2,G), 0= #count{Gi:or_dec(R2,G), isRefined(R2,G,Gi)}. %not decomposed in OR
+violation_rs(R2,R1,G) :- single_red(R1,R2,G), has(R2,G), and_dec(R2,G), isRefined(R2,G,Gi), violation_rs(R2,R1,Gi). 
+
+violation_rm(R2,R1,G) :- multi_red(R1,R2,G), has(R2,G), 0=#count{Gi:subgoal(Gi,G,R2)}. %not decomposed at all
+violation_rm(R2,R1,G) :- multi_red(R1,R2,G), has(R2,G), and_dec(R2,G), isRefined(R2,G,Gi), violation_rm(R2,R1,Gi). %and-subgoal is not decomposed
+
+%%% 	Single-actor redundancy	violated if the delegatee further delegates, it should be him to ensure redundancy %%%
+violation_rs(R2,R1,G) :- single_red(R1,R2,G), has(R2,G), subgoal(Gi,G,R2), delegated(R2,_,Gi).
+
+%%% 	Multi-actor redundancy violated if the delegatee does not further delegate, it should be him and at least another actor to ensure redundancy %%%
+violation_rm(R2,R1,G) :- multi_red(R1,R2,G), has(R2,G), 0=#count{R3: delegated(R2,R3,Gi), subgoal(Gi,G,R2)}.
+
+
+
+

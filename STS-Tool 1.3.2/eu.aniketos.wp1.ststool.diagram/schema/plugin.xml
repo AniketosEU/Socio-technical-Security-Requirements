@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="extensionpoint_plugin" name="STSPlugin" schema="schema/eu_aniketos_wp1_ststool_extension_plugin.exsd"/>
+   <extension-point id="contextcontribution" name="ContextMenuContribution" schema="schema/eu_aniketos_wp1_ststool_diagram_context.exsd"/>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="ststool_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="ststool_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/StstoolDiagramFile.gif"
+         extensions="ststool_diagram"
+         default="true"
+         class="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditor"
+         matchingStrategy="eu.aniketos.wp1.ststool.diagram.part.StsToolMatchingStrategy"
+         contributorClass="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="eu.aniketos.wp1.ststool.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/StstoolDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="eu.aniketos.wp1.ststool.diagram.part.StsToolCreationWizard"
+  	     id="eu.aniketos.wp1.ststool.diagram.part.StsToolCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+      <extension point="org.eclipse.ui.actionSets" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <actionSet
+            label="%initDiagramActionLabel"
+            visible="true"
+            id="eu.aniketos.wp1.ststool.diagram.InitDiagram">
+         <action
+               label="%initDiagramActionLabel"
+               class="eu.aniketos.wp1.ststool.diagram.part.StsToolInitDiagramFileAction"
+               menubarPath="file/additions"
+               id="eu.aniketos.wp1.ststool.diagram.InitDiagramAction">
+         </action>
+      </actionSet>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="StsToolPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="StsToolRender">
+         <Priority name="Lowest"/>
+         <ViewId id="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="eu.aniketos.wp1.ststool.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="eu.aniketos.wp1.ststool.diagram.general"
+            name="%prefpage.eu.aniketos.wp1.ststool.diagram.general"
+            class="eu.aniketos.wp1.ststool.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="eu.aniketos.wp1.ststool.diagram.appearance"
+            name="%prefpage.eu.aniketos.wp1.ststool.diagram.appearance"
+            category="eu.aniketos.wp1.ststool.diagram.general"
+            class="eu.aniketos.wp1.ststool.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="eu.aniketos.wp1.ststool.diagram.connections"
+            name="%prefpage.eu.aniketos.wp1.ststool.diagram.connections"
+            category="eu.aniketos.wp1.ststool.diagram.general"
+            class="eu.aniketos.wp1.ststool.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="eu.aniketos.wp1.ststool.diagram.printing"
+            name="%prefpage.eu.aniketos.wp1.ststool.diagram.printing"
+            category="eu.aniketos.wp1.ststool.diagram.general"
+            class="eu.aniketos.wp1.ststool.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="eu.aniketos.wp1.ststool.diagram.rulersAndGrid"
+            name="%prefpage.eu.aniketos.wp1.ststool.diagram.rulersAndGrid"
+            category="eu.aniketos.wp1.ststool.diagram.general"
+            class="eu.aniketos.wp1.ststool.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="eu.aniketos.wp1.ststool.diagram"
+            labelProvider="eu.aniketos.wp1.ststool.diagram.sheet.StsToolSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="eu.aniketos.wp1.ststool.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+          <propertyTab
+             category="extra"
+             id="property.tab.threat"
+             label="%tab.threat"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="eu.aniketos.wp1.ststool.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="eu.aniketos.wp1.ststool.diagram.sheet.StsToolPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+         </propertySection>
+         <propertySection
+            id="property.section.threat" 
+            tab="property.tab.threat"
+            class="eu.aniketos.wp1.ststool.diagram.sheet.ThreatEventPropertySection">
+            <input type="eu.aniketos.wp1.ststool.diagram.edit.parts.EventEditPart"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="eu.aniketos.wp1.ststool.diagram.providers.StsToolViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="StsTool"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,3001,3002"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017,4018"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="eu.aniketos.wp1.ststool.diagram.providers.StsToolEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="StsTool"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,3001,3002"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017,4018"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5003,5004,5005,5006,5007,5008,5001,5002"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="eu.aniketos.wp1.ststool.diagram.providers.StsToolModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.StsToolDiagramEditPart" id="StsToolDiagram_1000"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.AgentEditPart" id="Agent_2001"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.RoleEditPart" id="Role_2002"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.GoalEditPart" id="Goal_2003"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.TResourceEditPart" id="TResource_2004"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.IResourceEditPart" id="IResource_2005"/>
+         <object class="eu.aniketos.wp1.ststool.diagram.edit.parts.EventEditPart" id="Event_2006"/>
+         <context elements="StsToolDiagram_1000,Agent_2001,Role_2002,Goal_2003,TResource_2004,IResource_2005,Event_2006"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="eu.aniketos.wp1.ststool.diagram.providers.StsToolIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="eu.aniketos.wp1.ststool.diagram.providers.StsToolParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.StsToolDiagram_1000"
+               name="%metatype.name.StsToolDiagram_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StsToolDiagram"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.StsToolDiagramEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Agent_2001"
+               name="%metatype.name.Agent_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Agent"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.AgentEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Role_2002"
+               name="%metatype.name.Role_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Role"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.RoleEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <specializationType
+               id="eu.aniketos.wp1.ststool.diagram.Goal_2003"
+               name="%metatype.name.Goal_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="eu.aniketos.wp1.ststool.diagram.Goal_3001"/>
+            <param name="semanticHint" value="2003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <specializationType
+               id="eu.aniketos.wp1.ststool.diagram.TResource_2004"
+               name="%metatype.name.TResource_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="eu.aniketos.wp1.ststool.diagram.TResource_3002"/>
+            <param name="semanticHint" value="2004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.IResource_2005"
+               name="%metatype.name.IResource_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IResource"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.IResourceEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Event_2006"
+               name="%metatype.name.Event_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Event"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.EventEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Goal_3001"
+               name="%metatype.name.Goal_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Goal"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.GoalEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.TResource_3002"
+               name="%metatype.name.TResource_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TResource"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.TResourceEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Need_4001"
+               name="%metatype.name.Need_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Need"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.NeedEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Produce_4002"
+               name="%metatype.name.Produce_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Produce"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.ProduceEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Modify_4003"
+               name="%metatype.name.Modify_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Modify"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.ModifyEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.PositiveGoalContribution_4004"
+               name="%metatype.name.PositiveGoalContribution_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PositiveGoalContribution"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.PositiveGoalContributionEditHelper">
+            <param name="semanticHint" value="4004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.NegativeGoalContribution_4005"
+               name="%metatype.name.NegativeGoalContribution_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NegativeGoalContribution"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.NegativeGoalContributionEditHelper">
+            <param name="semanticHint" value="4005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.GoalDecompositionOR_4006"
+               name="%metatype.name.GoalDecompositionOR_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="GoalDecompositionOR"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.GoalDecompositionOREditHelper">
+            <param name="semanticHint" value="4006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.GoalDecompositionAND_4007"
+               name="%metatype.name.GoalDecompositionAND_4007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="GoalDecompositionAND"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.GoalDecompositionANDEditHelper">
+            <param name="semanticHint" value="4007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Own_4008"
+               name="%metatype.name.Own_4008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Own"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.OwnEditHelper">
+            <param name="semanticHint" value="4008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.PartOf_4009"
+               name="%metatype.name.PartOf_4009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PartOf"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.PartOfEditHelper">
+            <param name="semanticHint" value="4009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.TangibleBy_4010"
+               name="%metatype.name.TangibleBy_4010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TangibleBy"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.TangibleByEditHelper">
+            <param name="semanticHint" value="4010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Play_4011"
+               name="%metatype.name.Play_4011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Play"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.PlayEditHelper">
+            <param name="semanticHint" value="4011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Provision_4012"
+               name="%metatype.name.Provision_4012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Provision"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.ProvisionEditHelper">
+            <param name="semanticHint" value="4012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Delegation_4013"
+               name="%metatype.name.Delegation_4013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Delegation"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.DelegationEditHelper">
+            <param name="semanticHint" value="4013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Authorisation_4014"
+               name="%metatype.name.Authorisation_4014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Authorisation"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.AuthorisationEditHelper">
+            <param name="semanticHint" value="4014"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Threat_4015"
+               name="%metatype.name.Threat_4015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Threat"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.ThreatEditHelper">
+            <param name="semanticHint" value="4015"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.IncompatibleDuties_4016"
+               name="%metatype.name.IncompatibleDuties_4016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IncompatibleDuties"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.IncompatibleDutiesEditHelper">
+            <param name="semanticHint" value="4016"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.CompatibleDuties_4017"
+               name="%metatype.name.CompatibleDuties_4017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompatibleDuties"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.CompatibleDutiesEditHelper">
+            <param name="semanticHint" value="4017"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ststool/1.3.0">
+         <metamodelType
+               id="eu.aniketos.wp1.ststool.diagram.Dependency_4018"
+               name="%metatype.name.Dependency_4018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Dependency"
+               edithelper="eu.aniketos.wp1.ststool.diagram.edit.helpers.DependencyEditHelper">
+            <param name="semanticHint" value="4018"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="eu.aniketos.wp1.ststool.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="eu.aniketos.wp1.ststool.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="eu.aniketos.wp1.ststool.diagram.TypeContext">
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.StsToolDiagram_1000"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Agent_2001"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Role_2002"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Goal_2003"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.TResource_2004"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.IResource_2005"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Event_2006"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Goal_3001"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.TResource_3002"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Need_4001"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Produce_4002"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Modify_4003"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.PositiveGoalContribution_4004"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.NegativeGoalContribution_4005"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.GoalDecompositionOR_4006"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.GoalDecompositionAND_4007"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Own_4008"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.PartOf_4009"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.TangibleBy_4010"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Play_4011"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Provision_4012"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Delegation_4013"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Authorisation_4014"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Threat_4015"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.IncompatibleDuties_4016"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.CompatibleDuties_4017"/>
+         <elementType ref="eu.aniketos.wp1.ststool.diagram.Dependency_4018"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+
+   <extension id="StsToolApplication" point="org.eclipse.core.runtime.applications">
+      <?gmfgen generated="true"?>
+      <application>
+         <run class="eu.aniketos.wp1.ststool.diagram.application.StsToolApplication"/>
+      </application>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="eu.aniketos.wp1.ststool.diagram.StsToolApplication"
+            name="STS-Tool">
+         <property
+               name="appName"
+               value="STS-Tool">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/logo/about.gif">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="0080FF">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="175,220,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="aboutText"
+               value="STS-Tool&#x0A;Version 1.3.0&#x0A;&#x0A;How to: Bug reporting:&#x0A;Befor reporting a crash, provide us the log files, by  zipping the &quot;.metadata&quot; folder, located under&quot;../StsTool/Workspaces/&quot;.&#x0A;If you want you can also zip the &quot;.ststool_diagram&quot; file you were working on, while the crash occurred.&#x0A;Then attach this files directly to your crash report in mantis.">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/application icon/WindowsImage16x16.gif,icons/application icon/WindowsImage32x32.gif,icons/application icon/WindowsImage48x48.gif,icons/application icon/WindowsImage64x64.gif,icons/application icon/WindowsImage128x128.gif">
+         </property>
+      </product>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives" id="rcp-perspective">
+      <?gmfgen generated="true"?>
+      <perspective
+            id="eu.aniketos.wp1.ststool.diagram.StsToolPerspective"
+            name="%perspectiveName"
+            class="eu.aniketos.wp1.ststool.diagram.application.DiagramEditorPerspective">
+      </perspective>
+   </extension>
+
+
+
+    <extension point="org.eclipse.ui.actionSets" id="rcp-actions">
+      <?gmfgen generated="true"?>
+      <actionSet
+            label="%applicationActionSetLabel"
+            visible="true"
+            id="eu.aniketos.wp1.ststool.diagram.ActionSet">
+         <action
+               label="%newDiagramActionLabel"
+               class="eu.aniketos.wp1.ststool.diagram.application.DiagramEditorActionBarAdvisor$NewDiagramAction"
+               menubarPath="file/new/additions"
+               id="eu.aniketos.wp1.ststool.diagram.NewDiagramAction">
+         </action>
+         <action
+               label="%aboutActionLabel"
+               class="eu.aniketos.wp1.ststool.diagram.application.DiagramEditorActionBarAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="eu.aniketos.wp1.ststool.diagram.AboutAction">
+         </action>
+         <action
+               label="%openURIActionLabel"
+               definitionId="eu.aniketos.wp1.ststool.diagram.OpenURICommand"
+               class="eu.aniketos.wp1.ststool.diagram.application.DiagramEditorActionBarAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="eu.aniketos.wp1.ststool.diagram.OpenURIAction">
+         </action>
+         <action
+               label="%openActionLabel"
+               definitionId="eu.aniketos.wp1.ststool.diagram.OpenCommand"
+               class="eu.aniketos.wp1.ststool.diagram.application.DiagramEditorActionBarAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="eu.aniketos.wp1.ststool.diagram.OpenAction">
+         </action>
+      </actionSet>
+   </extension>
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+   
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="eu.aniketos.wp1.ststool.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+      <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension
+                  pattern="eu.aniketos.wp1.ststool.diagram.resourceContent">
+            </contentExtension>
+            <contentExtension
+                  pattern="eu.aniketos.wp1.ststool.diagram.domainResourceContent">
+            </contentExtension>
+            <contentExtension
+                  pattern="eu.aniketos.wp1.ststool.diagram.navigatorLinkHelper">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding
+            viewerId="eu.aniketos.wp1.ststool.diagram.viewerActionBinding2">
+         <includes>
+            <actionExtension
+                  pattern="eu.aniketos.wp1.ststool.diagram.navigatorActionProvider">
+            </actionExtension>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+      </perspectiveExtension>
+   </extension>
+   
+   <extension
+         point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+      <contributionItemProvider
+            checkPluginLoaded="false"
+            class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContributionItemProvider">
+         <Priority
+               name="Low">
+         </Priority>
+         <popupContribution
+               class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <!--<popupStructuredContributionCriteria
+                  objectClass="delegation.diagram.edit.parts.GoalEditPart">
+            </popupStructuredContributionCriteria> -->
+			<popupPredefinedItem id="fileMenu" remove="true"/>
+			 <!-- <popupPredefinedItem id="deleteFromDiagramAction" remove="true"/> -->
+			<popupPredefinedItem id="formatMenu" remove="true"/>
+			<popupPredefinedItem id="editMenu" remove="true"/>
+			<popupPredefinedItem id="filtersMenu" remove="true"/>
+			<popupPredefinedItem id="properties" remove="true"/>
+			<popupPredefinedItem id="navigateMenu" remove="true"/>
+   <popupPredefinedItem
+         id="toolbarArrangeAllAction"
+         remove="true">
+   </popupPredefinedItem>
+         </popupContribution>
+      </contributionItemProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="eu.aniketos.wp1.ststool.diagram.splashHandlers.BrowserSplashHandler"
+            id="eu.aniketos.wp1.ststool.diagram.splashHandlers.browser">
+      </splashHandler>
+      <splashHandler
+            class="eu.aniketos.wp1.ststool.diagram.splashHandlers.InteractiveSplashHandler"
+            id="eu.aniketos.wp1.ststool.diagram.splashHandlers.interactive">
+      </splashHandler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="eu.aniketos.wp1.ststool.diagram.custom.intro.STSToolIntro"
+            icon="icons/logo/logo 16.gif"
+            id="eu.aniketos.wp1.ststool.diagram.intro.STSToolIntro">
+      </intro>
+      <introProductBinding
+            introId="eu.aniketos.wp1.ststool.diagram.intro.STSToolIntro"
+            productId="eu.aniketos.wp1.ststool.diagram.product">
+      </introProductBinding>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="newstsdiagram"
+            name="New Diagram">
+      </command>
+      <command
+            id="openstsdiagram"
+            name="Open...">
+      </command>
+      <command
+            id="importdiagram"
+            name="Import...">
+      </command>
+      <command
+            description="Export the current diagram to image"
+            id="exportimage"
+            name="Export">
+      </command>
+      <category
+            description="Commands used to change View"
+            id="eu.aniketos.wp1.ststool.diagram.commands.changeViewCategory"
+            name="Change View">
+      </category>
+      <command
+            id="eu.aniketos.wp1.ststool.diagram.command.switchView"
+            name="Switch View">
+   <commandParameter
+         id="org.eclipse.ui.commands.radioStateParameter"
+         name="Radio Name"
+         optional="false">
+   </commandParameter>
+        <state 
+      id="org.eclipse.ui.commands.radioState"> 
+   <class 
+         class="org.eclipse.ui.handlers.RadioState"> 
+      <parameter 
+            name="default" 
+            value="social"> 
+      </parameter> 
+      <parameter 
+            name="persisted" 
+            value="false"> 
+      </parameter> 
+   </class> 
+</state>
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:file?after=new">
+         <command
+               commandId="newstsdiagram"
+               icon="icons/menu_buttons/NewFile.gif"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:file?after=open">
+         <command
+               commandId="openstsdiagram"
+               icon="icons/menu_buttons/OpenFile.gif"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:file?after=import">
+         <command
+               commandId="importdiagram"
+               icon="icons/menu_buttons/import.gif"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=file">
+         <menu
+               id="diagram"
+               label="&amp;Diagram"
+               mnemonic="d">
+    <command
+          commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+          label="Social View"
+          style="radio"
+          tooltip="Switch to the the Social View">
+        <parameter
+                name="org.eclipse.ui.commands.radioStateParameter"
+                value="social">
+        </parameter>
+    </command>
+    <command
+          commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+          label="Information View"
+          style="radio"
+          tooltip="Switch to the the Information View">
+       <parameter
+             name="org.eclipse.ui.commands.radioStateParameter"
+             value="information">
+       </parameter>
+    </command>
+    <command
+          commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+          label="Authorisation View"
+          style="radio"
+          tooltip="Switch to the the Authorisation View">
+        <parameter
+                name="org.eclipse.ui.commands.radioStateParameter"
+                value="authorisation">
+        </parameter>
+    </command>
+    <separator
+            name="additions"
+            visible="true">
+    </separator>
+               
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeEditorId">
+                  <equals
+                        value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+                  </equals>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:diagram?after=additions">
+         <command
+               commandId="exportimage"
+               icon="icons/menu_buttons/ExportImage.gif"
+               style="push"
+               tooltip="Export the current diagram to Image">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:file?after=new">
+         <command
+               commandId="newstsdiagram"
+               icon="icons/menu_buttons/NewFile.gif"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:file?after=open">
+         <command
+               commandId="openstsdiagram"
+               icon="icons/menu_buttons/OpenFile.gif"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:file?after=exoprt">
+         <command
+               commandId="exportimage"
+               icon="icons/menu_buttons/ExportImage.gif"
+               style="push"
+               tooltip="Export the current diagram to Image">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeEditorId">
+                  <equals
+                        value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+                  </equals>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   <menuContribution
+            locationURI="toolbar:view?after=views">
+            <command
+                  commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+                  label="Social View"
+                  style="radio"
+                  tooltip="Switch to the the Social View">
+        <parameter
+                name="org.eclipse.ui.commands.radioStateParameter"
+                value="social">
+        </parameter>
+        <visibleWhen
+              checkEnabled="false">
+           <with
+                 variable="activeEditorId">
+              <equals
+                    value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+              </equals>
+           </with>
+        </visibleWhen>
+    </command>
+            <command
+                  commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+                  label="Information View"
+                  style="radio"
+                  tooltip="Switch to the the Information View">
+               <parameter
+                     name="org.eclipse.ui.commands.radioStateParameter"
+                     value="information">
+               </parameter>
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="activeEditorId">
+                     <equals
+                           value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+                     </equals>
+                  </with>
+               </visibleWhen>
+            </command>
+    <command
+          commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+          label="Authorisation View"
+          style="radio"
+          tooltip="Switch to the the Authorisation View">
+        <parameter
+                name="org.eclipse.ui.commands.radioStateParameter"
+                value="authorisation">
+        </parameter>
+        <visibleWhen
+              checkEnabled="false">
+           <with
+                 variable="activeEditorId">
+              <equals
+                    value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+              </equals>
+           </with>
+        </visibleWhen>
+    </command>
+    <separator
+            name="eu.aniketos.wp1.ststool.diagram.toolbar.separator"
+            visible="true">
+    </separator>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="eu.aniketos.wp1.ststool.diagram.custom.handlers.NewSTSDiagramHandler"
+            commandId="newstsdiagram">
+      </handler>
+      <handler
+            class="eu.aniketos.wp1.ststool.diagram.custom.handlers.OpenSTSDiagramHandler"
+            commandId="openstsdiagram">
+      </handler>
+      <handler
+            class="eu.aniketos.wp1.ststool.diagram.custom.handlers.ImportDiagramHandler"
+            commandId="importdiagram">
+      </handler>
+      <handler
+            class="eu.aniketos.wp1.ststool.diagram.custom.handlers.ExportImage"
+            commandId="exportimage">
+      </handler>
+      <handler
+            class="eu.aniketos.wp1.ststool.diagram.custom.view.handlers.SwitchViewHandler"
+            commandId="eu.aniketos.wp1.ststool.diagram.command.switchView">
+      </handler>
+   </extension>
+   <extension
+         id="update-cmd-binding"
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="eu.aniketos.wp1.ststool.diagram.updateDiagram"
+            contextId="eu.aniketos.wp1.ststool.diagram.ui.diagramContext"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="F5">
+      </key>
+      <key
+            commandId="newstsdiagram"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+N">
+      </key>
+      <key
+            commandId="openstsdiagram"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+O">
+      </key>
+      <key
+            commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+1">
+         <parameter
+               id="org.eclipse.ui.commands.radioStateParameter"
+               value="social">
+         </parameter>
+      </key>
+      <key
+            commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+2">
+         <parameter
+               id="org.eclipse.ui.commands.radioStateParameter"
+               value="information">
+         </parameter>
+      </key>
+      <key
+            commandId="eu.aniketos.wp1.ststool.diagram.command.switchView"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+3">
+         <parameter
+               id="org.eclipse.ui.commands.radioStateParameter"
+               value="authorisation">
+         </parameter>
+      </key>
+      <key
+            commandId="exportimage"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+E">
+      </key>
+      <scheme
+            id="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            name="STS-Tool Scheme"
+            parentId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </scheme>
+   </extension>
+   <extension
+         point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders">
+      <paletteProvider
+            class="eu.aniketos.wp1.ststool.diagram.custom.part.STSDefaultPaletteProvider">
+         <Priority
+               name="High">
+         </Priority>
+         <contribution>
+            <predefinedEntry
+                  id="standardGroup/noteStack/noteTool"
+                  remove="true">
+            </predefinedEntry>
+            <predefinedEntry
+                  id="standardGroup/noteStack/textTool"
+                  remove="true">
+            </predefinedEntry>
+            <predefinedEntry
+                  id="standardGroup/noteStack/noteattachmentTool"
+                  remove="true">
+            </predefinedEntry>
+            <predefinedEntry
+                  id="standardGroup/selectionTool"
+                  remove="false">
+            </predefinedEntry>
+         </contribution>
+         <editor
+               id="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+         </editor>
+      </paletteProvider>
+   </extension>
+<extension point="org.eclipse.ui.commands" id="rcp-menu-commands">
+      <?gmfgen generated="true"?>
+      <command
+            name="%openURIActionLabel"
+            description="%openURIActionDescription"
+            categoryId="org.eclipse.ui.category.file"
+            id="eu.aniketos.wp1.ststool.diagram.OpenURICommand"/>  
+      <command
+            name="%openActionLabel"
+            description="%openActionDescription"
+            categoryId="org.eclipse.ui.category.file"
+            id="eu.aniketos.wp1.ststool.diagram.OpenCommand"/>  
+   </extension>
+
+<extension point="org.eclipse.ui.bindings" id="rcp-command-bindings">
+      <?gmfgen generated="true"?>
+      <key
+            commandId="eu.aniketos.wp1.ststool.diagram.OpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="eu.aniketos.wp1.ststool.diagram.OpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+<extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+      </menuContribution>
+   </extension>
+
+<extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+   </extension>
+
+
+   <!-- optionally, specify keybindings -->
+</plugin>

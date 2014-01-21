@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	Organizational constraints requirements	%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% to know which actor has a goal in the end of a chain
+% starting from has, check if that is the last actor, otherwise follow the delegation chain
+finalPerformer(R,G) :- has(R,G), 0=#count{R1: can_delegate(R,R1,G)}.
+finalPerformer(R,G) :- has(R,G), can_delegate(R,R1,G), not delegated(R,R1,G). 
+
+%finalPerformer(A,G) :- finalPerformer(R,G), play(A,R).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	SoD violation				%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 	Role-based meaning		     %%%%%%%%%
+% - played(A,R2) :- sod_role(R1,R2), played(A,R1), role(R1), role(R2), R1!= R2.
+% - played(A,R1) :- sod_role(R1,R2), played(A,R2), role(R1), role(R2), R1!= R2.
+% violate_sod_role(A,R1,R2) :- sod_role(R1,R2), played(A,R1), played(A,R2). 
+%%% already checked in the tool as part of the consistency analysis 
+
+%%% 	Goal-based meaning		     %%%%%%%%%
+% - finalPerformer(A,G2) :- sod_goal(G1,G2), finalPerformer(A,G1), goal(G1), goal(G2), G1!= G2.
+% - finalPerformer(A,G1) :- sod_goal(G1,G2), finalPerformer(A,G2), goal(G1), goal(G2), G1!= G2.
+
+%violate_sod_goal(A,G1,G2) :- sod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), play(A,R1), play(A,R2).
+violate_sod_goal(A,R1,G1,R2,G2) :- sod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), play(A,R1), play(A,R2).
+
+%%% in case no agent plays R, we still want to know if there is a possibility of violation
+%violate_sod_goal(R,G1,G2) :- sod_goal(G1,G2), finalPerformer(R,G1), finalPerformer(R,G2), 0=#count{A:play(A,R)}.
+violate_sod_goal(R,R,G1,R,G2) :- sod_goal(G1,G2), finalPerformer(R,G1), finalPerformer(R,G2), 0=#count{A:play(A,R)}.
+
+%%% in case an agent has a goal that is in sod with a role's goal, but the agent plays the role
+%violate_sod_goal(A,G1,G2) :- sod_goal(G1,G2), finalPerformer(A,G1), finalPerformer(R,G2), agent(A), role(R), play(A,R).
+violate_sod_goal(A,A,G1,R,G2) :- sod_goal(G1,G2), finalPerformer(A,G1), finalPerformer(R,G2), agent(A), role(R), play(A,R).
+
+%%% propagate through decompositions %%%%%%
+%%% if goals are or_dec than sod will hold between all subgoals 
+sod_goal(Ga,G2) :- sod_goal(G1,G2), or_dec(R,G1), isRefined(R,G1,Ga), finalPerformer(R,Ga).
+sod_goal(G1,Ga) :- sod_goal(G1,G2), or_dec(R,G2), isRefined(R,G2,Ga), finalPerformer(R,Ga).
+
+%%% if goals are and_dec than sod will hold between the goal and the set of and_subgoals 
+%%% sod_goal(Ga,G2) :- sod_goal(G1,G2), and_dec(R,G1), isRefined(R,G1,Ga).
+%%% don't know how to express that sod is between say G1 and the conjunction of G2's subgoals, not with all subgoals individually  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	CoD violation				%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% meaning of cod_goal
+%%% finalPerformer(A,G2) :- cod_goal(G1,G2), finalPerformer(A,G1), G1 != G2.
+%%% finalPerformer(A,G1) :- cod_goal(G1,G2), finalPerformer(A,G2), G1 != G2.
+
+%%% the relation is symmetric 
+%%% cod_goal(G1,G2) :- cod_goal(G2,G1).
+
+%%% valid rule for goals within an actor's scope, be it agent or role 
+% violate_cod_goal(A,G1,G2) :- cod_goal(G1,G2), finalPerformer(A,G1), not finalPerformer(A,G2).
+% violate_cod_goal(A,G1,G2) :- cod_goal(G1,G2), finalPerformer(A,G2), not finalPerformer(A,G1).
+
+%%% cod expressed over 2 goals of 2 different roles, which are not played by the same actor  
+%violate_cod_goal(A1,G1,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), play(A1,R1), play(A2,R2), A1 != A2.
+%violate_cod_goal(A2,G1,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), play(A1,R1), play(A2,R2), A1 != A2.
+
+violate_cod_goal(A,R1,G1,R2,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), agent(A), role(R1), role(R2), play(A,R2), not play(A,R1). 
+violate_cod_goal(A,R1,G1,R2,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), agent(A), role(R1), role(R2) ,play(A,R1), not play(A,R2).
+
+%%% cod expressed over 2 goals of 2 different roles, for which there is no agent playing 
+%violate_cod_goal(R1,G1,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), 0=#count{A:play(A,R1),play(A,R2)}.
+violate_cod_goal(R1,R1,G1,R2,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), 0=#count{A: agent(A)}.
+violate_cod_goal(R1,R1,G1,R2,G2) :- cod_goal(G1,G2), finalPerformer(R1,G1), finalPerformer(R2,G2), agent(A), not play(A,R1), not play(A,R2).
+
+%%% in case an agent has a goal that is in cod with a role's goal, but the agent does not play the role
+violate_cod_goal(A,A,G1,R,G2) :- cod_goal(G1,G2), finalPerformer(A,G1), finalPerformer(R,G2), agent(A), role(R), not play(A,R).
+
+%%% decompositions 
+cod_goal(Ga,G2) :- cod_goal(G1,G2), or_dec(R,G1), isRefined(R,G1,Ga), finalPerformer(R,Ga).
+cod_goal(G1,Ga) :- cod_goal(G1,G2), or_dec(R,G2), isRefined(R,G2,Ga), finalPerformer(R,Ga).
+
+%%% same here for and_dec
+

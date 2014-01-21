@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ststool" nsURI="http://ststool/1.3.0" nsPrefix="ststool">
+  <eClassifiers xsi:type="ecore:EClass" name="StsToolDiagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagActors" upperBound="-1"
+        eType="#//Actor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagIResources" upperBound="-1"
+        eType="#//IResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagTResources" upperBound="-1"
+        eType="#//TResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagGoals" upperBound="-1"
+        eType="#//Goal" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagEvents" upperBound="-1"
+        eType="#//Event" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graphicalConstraintMap"
+        lowerBound="1" upperBound="-1" eType="#//StringToStringMap" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//StsElement #//Threatable">
+    <eOperations name="isDeletable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingDelegations" upperBound="-1"
+        eType="#//Delegation" eOpposite="#//Delegation/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingDelegations" upperBound="-1"
+        eType="#//Delegation" containment="true" eOpposite="#//Delegation/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goals" upperBound="-1"
+        eType="#//Goal" containment="true" eOpposite="#//Goal/actorOwner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingProvisions" upperBound="-1"
+        eType="#//Provision" containment="true" eOpposite="#//Provision/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingProvisions" upperBound="-1"
+        eType="#//Provision" eOpposite="#//Provision/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingAuthorisations"
+        upperBound="-1" eType="#//Authorisation" containment="true" eOpposite="#//Authorisation/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingAuthorisations"
+        upperBound="-1" eType="#//Authorisation" eOpposite="#//Authorisation/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tResources" upperBound="-1"
+        eType="#//TResource" containment="true" eOpposite="#//TResource/actorOwner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iResources" upperBound="-1"
+        eType="#//Own" containment="true" eOpposite="#//Own/source"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Delegation" eSuperTypes="#//StsRelation #//Threatable">
+    <eOperations name="isDeletable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="canBeTransferred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceGoal" lowerBound="1"
+        eType="#//Goal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetGoal" lowerBound="1"
+        eType="#//Goal" eOpposite="#//Goal/delegatedFrom"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousDelegation" upperBound="-1"
+        eType="#//Delegation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextDelegations" upperBound="-1"
+        eType="#//Delegation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/incomingDelegations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/outgoingDelegations"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timesTransferable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preConditions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postConditions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="showSecurityNeeds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="redundancyType" eType="#//RedundancyType"
+        defaultValueLiteral="RedundancyType.NO_REDUNDANCY"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repudiationType" eType="#//RepudiationType"
+        defaultValueLiteral="RepudiationType.NO_REPUDIATION"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="securityNeeds" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availabilityValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trustworthiness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trustworthinessValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Provision" eSuperTypes="#//StsRelation">
+    <eOperations name="isDeletable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="canBeTransferred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousProvision" upperBound="-1"
+        eType="#//Provision"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextProvisions" upperBound="-1"
+        eType="#//Provision"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/incomingProvisions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/outgoingProvisions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceResource" lowerBound="1"
+        eType="#//TResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetResource" lowerBound="1"
+        eType="#//TResource" eOpposite="#//TResource/providedFrom"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preConditions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postConditions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="showSecurityNeeds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="securityNeeds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availabilityValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confidentiality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="#//Actor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playedRoles" upperBound="-1"
+        eType="#//Play" containment="true" eOpposite="#//Play/source"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeOfOrganisation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abilities" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="possessedCertificationsAndAccreditations"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherImportantFeatures"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//Actor #//SeparationOfDuties #//BindingOfDuties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playedBy" upperBound="-1"
+        eType="#//Play" eOpposite="#//Play/target"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mission" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependBy" lowerBound="1"
+        upperBound="-1" eType="#//Dependency" containment="true" eOpposite="#//Dependency/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependent" upperBound="-1"
+        eType="#//Dependency" eOpposite="#//Dependency/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TResource" eSuperTypes="#//Resource #//Threatable">
+    <eOperations name="isDeletable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="canBeProvided" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedTo" upperBound="-1"
+        eType="#//Provision"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedFrom" upperBound="-1"
+        eType="#//Provision" eOpposite="#//Provision/targetResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actorOwner" eType="#//Actor"
+        eOpposite="#//Actor/tResources"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intangibleElements" upperBound="-1"
+        eType="#//TangibleBy" eOpposite="#//TangibleBy/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goalsNeeding" upperBound="-1"
+        eType="#//Need" eOpposite="#//Need/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goalsProducing" upperBound="-1"
+        eType="#//Produce" eOpposite="#//Produce/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goalsModifing" upperBound="-1"
+        eType="#//Modify" eOpposite="#//Modify/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//StsElement #//Threatable #//SeparationOfDuties #//BindingOfDuties">
+    <eOperations name="isDeletable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="canBeDelegated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delegatedTo" upperBound="-1"
+        eType="#//Delegation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delegatedFrom" upperBound="-1"
+        eType="#//Delegation" eOpposite="#//Delegation/targetGoal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorisations" upperBound="-1"
+        eType="#//Authorisation" eOpposite="#//Authorisation/goals"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actorOwner" eType="#//Actor"
+        eOpposite="#//Actor/goals"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingContributions"
+        upperBound="-1" eType="#//GoalContribution" containment="true" eOpposite="#//GoalContribution/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingContribution" upperBound="-1"
+        eType="#//GoalContribution" eOpposite="#//GoalContribution/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingDecompositions"
+        upperBound="-1" eType="#//GoalDecomposition" containment="true" eOpposite="#//GoalDecomposition/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingDecompositions"
+        eType="#//GoalDecomposition" eOpposite="#//GoalDecomposition/target"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capability" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preConditions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postConditions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceNeeded" upperBound="-1"
+        eType="#//Need" containment="true" eOpposite="#//Need/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourcesProduced" upperBound="-1"
+        eType="#//Produce" containment="true" eOpposite="#//Produce/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourcesModified" upperBound="-1"
+        eType="#//Modify" containment="true" eOpposite="#//Modify/source"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Authorisation" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/outgoingAuthorisations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/incomingAuthorisations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goals" upperBound="-1"
+        eType="#//Goal" eOpposite="#//Goal/authorisations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
+        eType="#//IResource" eOpposite="#//IResource/authorisations"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timesTransferable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modification" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="produce" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distribution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//StsElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partsOf" upperBound="-1"
+        eType="#//PartOf" containment="true" eOpposite="#//PartOf/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subParts" upperBound="-1"
+        eType="#//PartOf" eOpposite="#//PartOf/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IResource" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorisations" upperBound="-1"
+        eType="#//Authorisation" eOpposite="#//Authorisation/resources"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owners" upperBound="-1"
+        eType="#//Own" eOpposite="#//Own/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tangibleElements" upperBound="-1"
+        eType="#//TangibleBy" containment="true" eOpposite="#//TangibleBy/source"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StsElement" abstract="true" eSuperTypes="#//StsObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonTransferableAuthorisation" eSuperTypes="#//Authorisation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TransferableAuthorisation" eSuperTypes="#//Authorisation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GoalContribution" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Goal" eOpposite="#//Goal/outgoingContributions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Goal" eOpposite="#//Goal/incomingContribution"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GoalDecomposition" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Goal"
+        eOpposite="#//Goal/outgoingDecompositions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Goal"
+        eOpposite="#//Goal/incomingDecompositions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositiveGoalContribution" eSuperTypes="#//GoalContribution"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativeGoalContribution" eSuperTypes="#//GoalContribution"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GoalDecompositionAND" eSuperTypes="#//GoalDecomposition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GoalDecompositionOR" eSuperTypes="#//GoalDecomposition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Threatable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatedElements" upperBound="-1"
+        eType="#//Threat" eOpposite="#//Threat/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//StsElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countermeasures" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="threatedElements" upperBound="-1"
+        eType="#//Threat" containment="true" eOpposite="#//Threat/source"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Own" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Actor" eOpposite="#//Actor/iResources"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//IResource" eOpposite="#//IResource/owners"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Play" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Agent" eOpposite="#//Agent/playedRoles"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Role" eOpposite="#//Role/playedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TangibleBy" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//IResource" eOpposite="#//IResource/tangibleElements"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//TResource" eOpposite="#//TResource/intangibleElements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PartOf" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/subParts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Resource" eOpposite="#//Resource/partsOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Need" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Goal" eOpposite="#//Goal/resourceNeeded"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//TResource" eOpposite="#//TResource/goalsNeeding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Produce" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Goal" eOpposite="#//Goal/resourcesProduced"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//TResource" eOpposite="#//TResource/goalsProducing"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modify" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Goal" eOpposite="#//Goal/resourcesModified"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//TResource" eOpposite="#//TResource/goalsModifing"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Threat" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Threatable" eOpposite="#//Threatable/threatedElements"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Event" eOpposite="#//Event/threatedElements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StsRelation" eSuperTypes="#//StsObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StsObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stsUniqueID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringToStringMap" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncompatibleDuties" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//SeparationOfDuties" eOpposite="#//SeparationOfDuties/incompatibleDutiesOut"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//SeparationOfDuties" eOpposite="#//SeparationOfDuties/incompatibleDutiesIn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SeparationOfDuties" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incompatibleDutiesOut"
+        upperBound="-1" eType="#//IncompatibleDuties" containment="true" eOpposite="#//IncompatibleDuties/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incompatibleDutiesIn" upperBound="-1"
+        eType="#//IncompatibleDuties" eOpposite="#//IncompatibleDuties/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingOfDuties" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compatibleDutiesOut" lowerBound="1"
+        upperBound="-1" eType="#//CompatibleDuties" containment="true" eOpposite="#//CompatibleDuties/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compatibleDutiesIn" lowerBound="1"
+        upperBound="-1" eType="#//CompatibleDuties" eOpposite="#//CompatibleDuties/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompatibleDuties" eSuperTypes="#//StsRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//BindingOfDuties" eOpposite="#//BindingOfDuties/compatibleDutiesIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//BindingOfDuties" eOpposite="#//BindingOfDuties/compatibleDutiesOut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RedundancyType">
+    <eLiterals name="NO_REDUNDANCY"/>
+    <eLiterals name="TRUE_SINGLE" value="1"/>
+    <eLiterals name="TRUE_MULTI" value="2"/>
+    <eLiterals name="FALLBACK_SINGLE" value="3"/>
+    <eLiterals name="FALLBACK_MULTI" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RepudiationType">
+    <eLiterals name="NO_REPUDIATION"/>
+    <eLiterals name="DELEGATOR_REPUDIATION" value="1"/>
+    <eLiterals name="DUAL_REPUDIATION" value="2"/>
+    <eLiterals name="DELEGATEEE_REPUDIATION" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependency">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Role" eOpposite="#//Role/dependBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Role" eOpposite="#//Role/dependent"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Run Consistency Analysis"
+            id="consitencyanalysis"
+            name="Consistency Analysis">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:analysis">
+         <command
+               commandId="consitencyanalysis"
+               icon="resources/icons/menu_icon.gif"
+               style="push"
+               tooltip="Run Constraint Analysis for the current Diagram">
+            <visibleWhen
+                  checkEnabled="false">
+               <reference
+                     definitionId="eu.aniketos.wp1.ststool.analysis.dlv.menu.expression">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:analysis">
+         <command
+               commandId="consitencyanalysis"
+               icon="resources/icons/menu_icon.gif"
+               style="push"
+               tooltip="Run Consistency Analysis for the current Diagram">
+            <visibleWhen
+                  checkEnabled="false">
+               <reference
+                     definitionId="eu.aniketos.wp1.ststool.analysis.dlv.menu.expression">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="eu.aniketos.wp1.ststool.analysis.consistency.handlers.RunAnalysisHandler"
+            commandId="consitencyanalysis">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="eu.aniketos.wp1.ststool.analysis.dlv.menu.expression">
+            <with
+                  variable="activeEditorId">
+               <equals
+                     value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+               </equals>
+            </with>
+      </definition>
+   </extension>
+</plugin>

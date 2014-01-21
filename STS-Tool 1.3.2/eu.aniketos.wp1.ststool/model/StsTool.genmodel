@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="DISI - University of Trento"
+    modelDirectory="/eu.aniketos.wp1.ststool.emfModel/src" creationIcons="false" editDirectory="/eu.aniketos.wp1.ststool.edit/src"
+    editorDirectory="/eu.aniketos.wp1.ststool.editor/src" modelPluginID="eu.aniketos.wp1.ststool"
+    modelName="StsTool" modelPluginClass="" richClientPlatform="true" testsDirectory="/eu.aniketos.wp1.ststool.tests/src"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" language=""
+    interfaceNamePattern="" classNamePattern="">
+  <foreignModel>StsTool.ecore</foreignModel>
+  <genPackages prefix="Ststool" basePackage="eu.aniketos.wp1" disposableProviderFactory="true"
+      ecorePackage="StsTool.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="StsTool.ecore#//RedundancyType">
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RedundancyType/NO_REDUNDANCY"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RedundancyType/TRUE_SINGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RedundancyType/TRUE_MULTI"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RedundancyType/FALLBACK_SINGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RedundancyType/FALLBACK_MULTI"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="StsTool.ecore#//RepudiationType">
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RepudiationType/NO_REPUDIATION"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RepudiationType/DELEGATOR_REPUDIATION"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RepudiationType/DUAL_REPUDIATION"/>
+      <genEnumLiterals ecoreEnumLiteral="StsTool.ecore#//RepudiationType/DELEGATEEE_REPUDIATION"/>
+    </genEnums>
+    <genClasses ecoreClass="StsTool.ecore#//StsToolDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//StsToolDiagram/diagActors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//StsToolDiagram/diagIResources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//StsToolDiagram/diagTResources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//StsToolDiagram/diagGoals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//StsToolDiagram/diagEvents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//StsToolDiagram/graphicalConstraintMap"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Actor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/incomingDelegations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/outgoingDelegations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/goals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/outgoingProvisions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/incomingProvisions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/outgoingAuthorisations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/incomingAuthorisations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/tResources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Actor/iResources"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Actor/isDeletable"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Delegation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Delegation/sourceGoal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Delegation/targetGoal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Delegation/previousDelegation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Delegation/nextDelegations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Delegation/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Delegation/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/timesTransferable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/preConditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/postConditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/showSecurityNeeds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/redundancyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/repudiationType"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/securityNeeds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/availability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/availabilityValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/trustworthiness"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Delegation/trustworthinessValue"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Delegation/isDeletable"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Delegation/canBeTransferred"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Provision">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Provision/previousProvision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Provision/nextProvisions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Provision/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Provision/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Provision/sourceResource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Provision/targetResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/preConditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/postConditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/showSecurityNeeds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/integrity"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/securityNeeds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/availability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Provision/availabilityValue"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Provision/isDeletable"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Provision/canBeTransferred"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Agent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Agent/playedRoles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Agent/typeOfOrganisation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Agent/abilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Agent/possessedCertificationsAndAccreditations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Agent/otherImportantFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Role">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Role/playedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Role/purpose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Role/mission"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Role/dependBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Role/dependent"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//TResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/providedTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/providedFrom"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/actorOwner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/intangibleElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/goalsNeeding"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/goalsProducing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//TResource/goalsModifing"/>
+      <genOperations ecoreOperation="StsTool.ecore#//TResource/isDeletable"/>
+      <genOperations ecoreOperation="StsTool.ecore#//TResource/canBeProvided"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Goal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/delegatedTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/delegatedFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/authorisations"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/actorOwner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/outgoingContributions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/incomingContribution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/outgoingDecompositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/incomingDecompositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Goal/capability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Goal/preConditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Goal/postConditions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/resourceNeeded"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/resourcesProduced"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Goal/resourcesModified"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Goal/isDeletable"/>
+      <genOperations ecoreOperation="StsTool.ecore#//Goal/canBeDelegated"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Authorisation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Authorisation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Authorisation/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Authorisation/goals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Authorisation/resources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Authorisation/timesTransferable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Authorisation/usage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Authorisation/modification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Authorisation/produce"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Authorisation/distribution"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Resource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//Resource/partsOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Resource/subParts"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//IResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//IResource/authorisations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//IResource/owners"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//IResource/tangibleElements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="StsTool.ecore#//StsElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//StsElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//NonTransferableAuthorisation"/>
+    <genClasses ecoreClass="StsTool.ecore#//TransferableAuthorisation"/>
+    <genClasses ecoreClass="StsTool.ecore#//GoalContribution">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//GoalContribution/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//GoalContribution/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//GoalDecomposition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//GoalDecomposition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//GoalDecomposition/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//PositiveGoalContribution"/>
+    <genClasses ecoreClass="StsTool.ecore#//NegativeGoalContribution"/>
+    <genClasses ecoreClass="StsTool.ecore#//GoalDecompositionAND"/>
+    <genClasses ecoreClass="StsTool.ecore#//GoalDecompositionOR"/>
+    <genClasses image="false" ecoreClass="StsTool.ecore#//Threatable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Threatable/threatedElements"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Event/countermeasures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Event/threatedElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//Event/eventID"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Own">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Own/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Own/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Play">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Play/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Play/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//TangibleBy">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//TangibleBy/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//TangibleBy/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//PartOf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//PartOf/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//PartOf/source"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Need">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Need/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Need/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Produce">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Produce/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Produce/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Modify">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Modify/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Modify/target"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Threat">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Threat/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Threat/source"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//StsRelation"/>
+    <genClasses image="false" ecoreClass="StsTool.ecore#//StsObject">
+      <genFeatures notify="false" createChild="false" propertyCategory="" propertyDescription=""
+          propertySortChoices="true" ecoreFeature="ecore:EAttribute StsTool.ecore#//StsObject/stsUniqueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//StsObject/description"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//StringToStringMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//StringToStringMap/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StsTool.ecore#//StringToStringMap/value"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//IncompatibleDuties">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//IncompatibleDuties/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//IncompatibleDuties/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="StsTool.ecore#//SeparationOfDuties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//SeparationOfDuties/incompatibleDutiesOut"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//SeparationOfDuties/incompatibleDutiesIn"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="StsTool.ecore#//BindingOfDuties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StsTool.ecore#//BindingOfDuties/compatibleDutiesOut"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//BindingOfDuties/compatibleDutiesIn"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//CompatibleDuties">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//CompatibleDuties/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//CompatibleDuties/source"/>
+    </genClasses>
+    <genClasses ecoreClass="StsTool.ecore#//Dependency">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StsTool.ecore#//Dependency/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StsTool.ecore#//Dependency/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

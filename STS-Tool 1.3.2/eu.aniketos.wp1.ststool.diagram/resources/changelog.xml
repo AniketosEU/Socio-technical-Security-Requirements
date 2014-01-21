@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+	<ReleaseVersion date="05/08/2013" version="1.3.2">
+		<entry>Fixed a bug for which the Save button was disabled sometimes</entry>
+		<entry>Fixed a bug for which the descriptions of some security requirements were not displayed</entry>
+		<entry>Added Confidentiality security property under provision</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="13/05/2013" version="1.3.1">
+		<entry>Added threat repository</entry>
+		<entry>Added Event section in the report generation</entry>
+		<entry>Moved the consistency check for leaf delegation to live constraint</entry>
+		<entry>Moved the consistency check for capability to live constraint</entry>
+		<entry>Moved the business checks from the consistency analysis to security analysis</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="21/12/2012" version="1.3.0 ">
+		<entry>Added Consistency Analysis Support</entry>
+		<entry>Added Security Analysis Support</entry>
+		<entry>Added new view "Security Results"</entry>
+		<entry>Updated report's generation</entry>
+		<entry>Tool's manual is now available under Help->Help contents</entry>
+		<entry>Added new security need "Availability" on Provisions</entry>
+		<entry>Added new security need "Availability" on Delegation</entry>
+		<entry>Added new security need "Trustworthiness" on Delegation</entry>
+		<entry>Authorisation "Transferability" property has been moved form property view to the context menu</entry>
+		<entry bugId="190">Authorisation's operations now have a tooltip, and can be set/unset with a double-click instead of a single click </entry>
+		<entry bugId="193">Authorisation's informations and goals's name are now updated correctly</entry>
+		<entry>Fixed a spelling bug in the authorisation box</entry>
+		<entry>Play relationship is now visible on all views</entry>
+		<entry>Generated SRS is now compliance with SRS v.1.6</entry>
+		<entry>Minor bugs fixes</entry>	
+	</ReleaseVersion>
+
+	<ReleaseVersion date="01/06/2012" version="1.2.0">
+		<entry>Added new relations Combine / Incomaptible</entry>
+		<entry>Added new security need "Integrity" for provision</entry>
+		<entry>Changed the security need "Redundancy" for delegation</entry>
+		<entry>Reordered palette's elements</entry>
+		<entry>Improved the generated report</entry>
+		<entry>Moved the goal capability from property view to the context menu</entry>
+		<entry>arker color for delegated/provided goals/resources</entry>
+		<entry bugId="188">Added the Import function for older diagrams(1.1.x)</entry>
+		<entry bugId="187">Disabled the possibility to duplicate object with ctrl button</entry>
+		<entry>Generated SRS is now compliance with SRS v.1.5</entry>
+		<entry>Minor bugs fixes</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="01/06/2012" version="1.1.2">
+		<entry bugId="185">Fixed bugs that caused report generation to fail</entry>
+		<entry bugId="146">Fixed MacOs bug: actor rationale turned black when moving objects</entry>
+		<entry bugId="171">Size of the license window have been decreased</entry>
+		<entry bugId="184">Corrected a spelling error in the security requirements document's wizard</entry>
+		<entry>Fixed a bug that allowed self-delegation of goals</entry>
+		<entry>Other Major bugs fixes</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="18/05/2012" version="1.1.1">
+		<entry bugId="95">Added support for generating security requirements document</entry>
+		<entry>Added support for exporting SRS to an XML file </entry>
+		<entry>Minor bugs fixes</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="27/04/2012" version="1.1.0">
+		<entry bugId="84">Keep unique name for elements: not possible to set 2 elements with the same name</entry>
+		<entry bugId="89">Diagram popup helper has been corrected and improved with the correct icons</entry>
+		<entry>Notes disabled</entry>
+		<entry bugId="96">Set a maximum limit to the length of elements' names</entry>
+		<entry bugId="97">Textbox used to rename elements is set inside the element bound</entry>
+		<entry bugId="98">Resolved a bug where AND/OR text under decomposition was cut off</entry>
+		<entry bugId="99">Improved graphical representation for goal delegation</entry>
+		<entry bugId="100">Improved graphical representation for authorization</entry>
+		<entry bugId="101">Cleaned the property view: removed redundant properties</entry>
+		<entry bugId="102">Added some creation constraint to improve modeling</entry>
+		<entry bugId="103">Allow delegation to start from the goal only</entry>
+		<entry bugId="103">Allow provision to start from the document only</entry>
+		<entry bugId="106">Allow addition/editing of the information/goal set specified in authorizations by double-clicking on the corresponding slots</entry>
+		<entry bugId="132">Allow deleting authorization relationships, even though there have been information/goals specified</entry>
+		<entry bugId="109">Label space in contribution has been fixed</entry>
+		<entry bugId="104">Added the "Security Requirements" View</entry>
+		<entry bugId="105">Keep one copy of a goal within an actor's compartment, when it has been delegated from different actors</entry>
+		<entry bugId="136">"Event" Graphical Representation has been changed to a smaller red triangle shape</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="11/01/2012" version="1.0.5">
+		<entry bugId="24">Added a scrollbar to see long list of Goals / IResources in Authorization link</entry>
+		<entry bugId="75">Resolved a bug that causes Role compartment to open themselves when switching view</entry>
+		<entry bugId="76">Compartment will now close completely when collapsed</entry>
+		<entry bugId="12">The role object and its compartment is always joined</entry>
+		<entry bugId="77">The Event Countermeasures property has now a String Value</entry>
+		<entry bugId="78">Resolved a bug that don't permit to delete a produce link after creation</entry>
+		<entry bugId="80">Added the possibility to change font size as a general preference "Window->Preference->Appearance"</entry>
+		<entry bugId="81">And / Or links are now always straight line</entry>
+		<entry bugId="79">A warning box now appear if you try to delete a non deletable elements</entry>
+		<entry bugId="82">Elements now have a unique name on creations</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="12/12/2011" version="1.0.4">
+		<entry>Improved tool stability</entry>
+		<entry>Fixed a bug where palette doesn't change when switching between diagrams</entry>
+		<entry bugId="55">Improved Drag and Drop of Goals/TResources</entry>
+		<entry bugId="30">Disabled creation of Goals/TResources on the diagram (Now is possible to create it only in actors compartment)</entry>
+		<entry bugId="21">Added a tooltip to display long name on all elements (leave the cursor over a element some second to see it)</entry>
+		<entry bugId="28">Resolved a bug that causes elements inside actor compartment, disappears if their position was changed to north or west</entry>
+		<entry bugId="32">Delegation and Provision disable on self</entry>
+		<entry bugId="66">Added some space in the figure to avoid text go too near to the border</entry>
+		<entry bugId="33">Fixed provision postcondition parameter that was an integer. Now is a String</entry>
+		<entry bugId="34">Resolved a bug that didn't permit to select Goal / TResource in the part outside Actor boundary</entry>
+		<entry bugId="73">Resolved a bug that didn't show correctly the editor form, when renaming elements</entry>
+		<entry bugId="68">Resolved a bug that permit a gl to be decomposed by multiple goal</entry>
+		<entry bugId="42">Resolved a bug that permit goal decomposition cycling</entry>
+		<entry bugId="22">Improved the graphics of decomposition relation. Label from the connection removed, Added a semicircle indicating the type of the decomposition. The decomposition "connection point" have been fixed and the middle point removed so the connection line can be only a straight line</entry>
+		<entry bugId="47">Resolved a bug that permit "Need", "Produce", "Modify" to link resources in different container</entry>
+		<entry bugId="67">Resolved a bug that permit to decompose goals from different container</entry>
+		<entry bugId="65">"No Repudiation" renamed to "Non-Repudiation</entry>
+		<entry bugId="5">Added the possibility to save the diagram to different image format</entry>
+		<entry bugId="4">Now is possible to draw Delegation / Provision directly from Goal / TResource</entry>
+		<entry bugId="41">Palette tool will remain selected while pressing CTRL during elements creation</entry>
+		<entry bugId="74">Dragging of Goal/TResource between Actors Compartment have been disabled</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="02/11/2011" version="1.0.3">
+		<entry bugId="8">Resolved a bug, that do not update the delegation figure properties if they was set using property windows</entry>
+		<entry bugId="3">Label delegation/provision now instantly update their label</entry>
+		<entry bugId="19">Resolved a bug, that throw an exception if you try to save on program exit</entry>
+		<entry>Removed menu entry "Initialize diagram file"</entry>
+		<entry>Changed BasePath for new/open file from "user_home" to "workspace"</entry>
+		<entry>When open a file now, is possible to select only ".ststool_diagram" file</entry>
+		<entry bugId="18">Added an option under "windows->preferences->StsTool Diagram->Connections" to disable Antialiasing. Disabling antialiasing under Mac and Linux remove the thin line problem</entry>
+		<entry bugId="26">Fixed a bug that dont't display the filename in the editor tab when switching view</entry>
+		<entry bugId="23">Fixed a bug that dosen't permit to change goal name after it was delegated</entry>
+		<entry bugId="27">Fixed a bug that corrupt the diagram when try to save after deleting a delegation</entry>
+		<entry bugId="59">Added a key mapping for zoom (ctrl+KeyNumpad'+',ctrl+KeyNumpad'-') and mouse mapping (ctrl-wheel)</entry>
+		<entry bugId="37">Added a tooltip to display long goal name (leave the cursor over a element some second to see it)</entry>
+		<entry bugId="60">Workbench now save his state (position, size, custom perspective)</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="03/10/2011" version="1.0.2">
+		<entry>Delegation / Provison now anchor on the Agent / Role Node</entry>
+		<entry bugId="17">Resolved a bug, that will not save element position in certain case</entry>
+		<entry>Added branding, Splash and icon image to the Tool</entry>
+		<entry bugId="6">Tool Version now is displayed on the window title and in the "Help -> About" menu</entry>
+		<entry bugId="13">Authorisation properties can be updated using properties view</entry>
+		<entry bugId="9">Correct "Autorization" spelling error</entry>
+	</ReleaseVersion>
+
+	<ReleaseVersion date="27/09/2011" version="1.0.1">
+		<entry bugId="1">Partially resolved View switching issues (compartments not updated)</entry>
+		<entry>Label on delegation provision not trunkated anymore</entry>
+		<entry>Position of element in different view persist on save</entry>		 		
+	</ReleaseVersion>
+
+	<ReleaseVersion date="19/09/2011" version="1.0.0">
+		<entry>First relase of the tool</entry>
+	</ReleaseVersion>
+</log>

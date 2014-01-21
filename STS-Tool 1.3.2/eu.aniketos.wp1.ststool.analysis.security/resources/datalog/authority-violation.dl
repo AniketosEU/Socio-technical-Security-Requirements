@@ -1,0 +1,16 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	Unauthorised delegation of rights	%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% actor has the right to perform the operation, but does not have the right to delegate authorisations (T=0)
+violate_del_of_authority(R1,R2,I) :- - has_authority_to_authorise(R1,I), authorise_usage(R1,R2,I).
+violate_del_of_authority(R1,R2,I) :- - has_authority_to_authorise(R1,I), authorise_modification(R1,R2,I).
+violate_del_of_authority(R1,R2,I) :- - has_authority_to_authorise(R1,I), authorise_production(R1,R2,I).
+violate_del_of_authority(R1,R2,I) :- - has_authority_to_authorise(R1,I), authorise_distribution(R1,R2,I).
+
+
+%%% what's important is that it does not even have the right, and passes authorisation about it, it could have T=1 or 0
+unauthorised_del_of_usage(R1,R2,I) :- not has_authority_to_use(R1,I), authorise_usage(R1,R2,I), not violate_del_of_authority(R1,R2,I).
+unauthorised_del_of_modification(R1,R2,I) :- not has_authority_to_modify(R1,I), authorise_modification(R1,R2,I), not violate_del_of_authority(R1,R2,I).
+unauthorised_del_of_production(R1,R2,I) :- not has_authority_to_produce(R1,I), authorise_production(R1,R2,I), not violate_del_of_authority(R1,R2,I).
+unauthorised_del_of_distribution(R1,R2,I) :- not has_authority_to_distribute(R1,I), authorise_distribution(R1,R2,I), not violate_del_of_authority(R1,R2,I).

@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	Delegation requirements		%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	No-delegation violation 	%%%%%%%%%%%%%%
+%%% delegatee redelegates the delegated goals (or parts of it)
+%%% even though no-del is specified 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% base case
+%%% violateNoDelegation(R2,R1,G) :- delegated(R1,R2,G), no_delegation(R1,R2,G), delegated(R2,_,G).
+
+%%% goal might be decomposed
+violate_no_delegation(R2,R1,G,Gi) :- delegated(R1,R2,G), no_delegation(R1,R2,G,Gi), delegated(R2,_,Gi).
+
+%%% expand no_delegation to the subgoals
+no_delegation(R1,R2,Gp,G) :- no_delegation(R1,R2,_,Gp), has(R2,G), isRefined(R2,Gp,G).
+

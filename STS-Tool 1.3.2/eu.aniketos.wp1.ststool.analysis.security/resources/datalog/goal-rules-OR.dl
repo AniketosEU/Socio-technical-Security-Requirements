@@ -1,0 +1,25 @@
+%%% Gp is parent goal %%%
+has(R,G) :- has(R,Gp), and_dec(R,Gp), isRefined(R,Gp,G). 
+
+has(R,Ga) v - has(R,Ga) :- has(R,Gp), or_dec(R,Gp), isRefined(R,Gp,Ga).
+
+-has(R,Gp) :- or_dec(R,Gp),  0=#count{Ga : isRefined(R,Gp,Ga), has(R,Ga)}. 
+%%% bottom up approach to define has and to see all the worlds that are created 
+%%% result contains all combinations, so we gotta get rid of the worlds that have -has for all alternatives   
+
+%%%-has(R,Gp) :- or_dec(R,Gp),  1<#count{Ga : isRefined(R,Gp,Ga), has(R,Ga)}. 
+
+delegated(R1,R2,Ga) :- has(R1,Ga), can_delegate(R1,R2,Ga). 
+
+%%% to discuss: consider acceptance of delegation to say R2 has Ga
+%%% should I include that in the rules? or is just in our justification?
+%%% accepted(R2,R1,G) v -accepted(R2,R1,G) :- delegated(R1,R2,G).
+%%% has(R2,G) :- delegated(_,R2,G).
+%%% or simply add accepted to delegated: 
+%%% has(R2,Ga) :- delegated(_,R2,Ga), accepted(R2,Ga).
+
+has(R2,Ga) :- delegated(_,R2,Ga).
+
+%%% subgoal definition 
+subgoal(G,Gp,R) :- isRefined(R,Gp,G).
+subgoal(G1,G2,R) :- subgoal(G1,G3,R), subgoal(G3,G2,R).

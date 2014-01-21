@@ -1,0 +1,10 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	Conflicts over incoming authorisations	%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% actor has the right to perform the operation, but does not have the right to delegate authorisations (T=0)
+auth_usage_conflict(R1,R3,R2,I) :- authorise_usage(R1,R2,I), - authorise_usage(R3,R2,I).
+auth_modif_conflict(R1,R3,R2,I) :- authorise_modification(R1,R2,I), - authorise_modification(R3,R2,I).
+auth_produ_conflict(R1,R3,R2,I) :- authorise_production(R1,R2,I), - authorise_production(R3,R2,I).
+auth_discl_conflict(R1,R3,R2,I) :- authorise_distribution(R1,R2,I), - authorise_distribution(R3,R2,I).
+auth_trasf_conflict(R1,R3,R2,I) :- authorise_transferibility(R1,R2,I), - authorise_transferibility(R3,R2,I).

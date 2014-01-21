@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="STS Views"
+            id="eu.anuketos.wp1.ststool.views.category">
+      </category>
+      <view
+            allowMultiple="false"
+            category="eu.anuketos.wp1.ststool.views.category"
+            class="eu.aniketos.wp1.ststool.commitments.view.part.CommitmentsView"
+            icon="icons/sample.gif"
+            id="eu.anuketos.wp1.ststool.view.commitmentview"
+            name="Security Requirements"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="eu.aniketos.wp1.ststool.diagram.extensionpoint_plugin">
+      <DiagramObserver
+            class="eu.aniketos.wp1.ststool.commitments.manager.CommitmentPlugin">
+      </DiagramObserver>
+      <ViewContributor
+            viewID="eu.anuketos.wp1.ststool.view.commitmentview">
+      </ViewContributor>
+   </extension>
+
+</plugin>

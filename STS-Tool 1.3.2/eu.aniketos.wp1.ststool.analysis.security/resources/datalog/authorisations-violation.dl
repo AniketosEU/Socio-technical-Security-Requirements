@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Authorisations violation		%%%%%%%%%%%%%%%%%%%%%%%
+%%% Defines violations for need-to-know, non-usage, non-modification, and non-production %%
+
+%%% Need-to-know violation	%%%%%%%%%%
+violate_ntk(R,I,G) :-  -scope_g(R,I,G),  used(R,I,G), not violate_non_usage(R,I,G).
+violate_ntk(R,I,G) :- -scope_g(R,I,G), modified(R,I,G), not violate_non_modification(R,I,G).
+violate_ntk(R,I,G) :- -scope_g(R,I,G), produced(R,I,G), not violate_non_production(R,I,G).
+
+% from the part to the whole
+violate_ntk(R,I1,G) :- violate_ntk(R,I,G), partOfI(I1,I).
+% since we don't know which part, pessimistic approach considers the whole is also compromised 
+violate_ntk(R,I,G) :- violate_ntk(R,I1,G), partOfI(I1,I).
+
+%%% Non_usage violation	%%%%%%%%%%%%%%
+violate_non_usage(R,I,G) :- not has_authority_to_use(R,I), used(R,I,G).
+used(R,I,G) :- possess(R,D), can_use(R,I,D,G).
+
+%%% extend non_use for cases in which I contains other information (partOfI)
+violate_non_usage(R,I1,G) :- violate_non_usage(R,I,G), partOfI(I1,I).
+violate_non_usage(R,I,G) :- violate_non_usage(R,I1,G), partOfI(I1,I).
+
+%%% Non_modification violation	%%%%%%%%%%%%
+violate_non_modification(R,I,G) :- not has_authority_to_modify(R,I), modified(R,I,G).
+modified(R,I,G) :- possess(R,D), can_modify(R,I,D,G).
+
+violate_non_modification(R,I1,G) :- violate_non_modification(R,I,G), partOfI(I1,I).
+violate_non_modification(R,I,G) :- violate_non_modification(R,I1,G), partOfI(I1,I).
+
+%%% Non_production violation	%%%%%%%
+violate_non_production(R,I,G) :- not has_authority_to_produce(R,I), produced(R,I,G).
+produced(R,I,G) :- can_produce(R,I,D,G).
+
+violate_non_production(R,I1,G) :- violate_non_production(R,I,G), partOfI(I1,I).
+violate_non_production(R,I,G) :- violate_non_production(R,I1,G), partOfI(I1,I).
+
+%%% Non_disclosure violation	%%%%%%%
+violate_non_disclosure(R,I,D) :- not has_authority_to_distribute(R,I), distributed(R,I,D).	 
+distributed(R,I,D) :- possess(R,D), can_distribute(R,I,D).
+
+violate_non_disclosure(R,I1,G) :- violate_non_disclosure(R,I,G), partOfI(I1,I). 
+violate_non_disclosure(R,I,G) :- violate_non_disclosure(R,I1,G), partOfI(I1,I). 

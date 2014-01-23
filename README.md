@@ -1,10 +1,6 @@
 Socio-technical-Security-Requirements
 =====================================
 
-Package name
-------------
-STS-Tool
-
 
 Short description
 -----------------

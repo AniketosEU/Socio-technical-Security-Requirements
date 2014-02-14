@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="STS Tool Help" topic="html/Help.html">
+  	<topic href="html/Help.html#introAnchor" label="Introduction">
+	</topic>
+	<topic href="html/Help.html#GUIOverviewAnchor" label="GUI Overview">
+		<topic href="html/Help.html#CreatingNewDiagramAnchor" label="Creating a new diagram"> </topic>
+		<topic href="html/Help.html#WorkEnvironmentOverviewAnchor" label="Work environment overview"> </topic>
+	</topic>
+	<topic href="html/Help.html#modelingScenarioAnchor" label="Modeling a scenario">
+		<topic href="html/Help.html#AddingElementsAnchor" label="Adding Elements"> </topic>
+		<topic href="html/Help.html#AddingRelationsAnchor" label="Adding Relations"> </topic>
+		<topic href="html/Help.html#SettingPropertiesAnchor" label="Setting properties"> </topic>
+		<topic href="html/Help.html#ViewsAnchor" label="Views"> </topic>
+		<topic href="html/Help.html#FrequentoperationsAnchor" label="Frequent operations (delete, moving and renaming)"> </topic>
+	</topic>
+	<topic href="html/Help.html#ElementsRelationsAnchor" label="Elements and Relations">
+		<topic href="html/Help.html#AgentERoleAnchor" label="Agent &amp; Role"> </topic>
+		<topic href="html/Help.html#GoalAnchor" label="Goal"> </topic>
+		<topic href="html/Help.html#DocumentAnchor" label="Document"> </topic>
+		<topic href="html/Help.html#InformationAnchor" label="Information"> </topic>
+		<topic href="html/Help.html#EventAnchor" label="Event"> </topic>
+		<topic href="html/Help.html#NeedProduceModifyAnchor" label="Need / Produce / Modify"> </topic>
+		<topic href="html/Help.html#PositiveNegativeContributionAnchor" label="Positive or negative contribution"> </topic>
+		<topic href="html/Help.html#GoalDecompositionAnchor" label="OR Decomposition / AND Decomposition"> </topic>
+		<topic href="html/Help.html#PlayAnchor" label="Play"> </topic>
+		<topic href="html/Help.html#IncompatibleAnchor" label="Incompatible"> </topic>
+		<topic href="html/Help.html#CombineAnchor" label="Combine"> </topic>
+		<topic href="html/Help.html#ProvisionAnchor" label="Provision"> </topic>
+		<topic href="html/Help.html#DelegationAnchor" label="Delegation"> </topic>
+		<topic href="html/Help.html#ThreatAnchor" label="Threat"> </topic>
+		<topic href="html/Help.html#PartOfAnchor" label="Part Of"> </topic>
+		<topic href="html/Help.html#MadeTangibleByAnchor" label="Made Tangible By"> </topic>
+		<topic href="html/Help.html#OwnAnchor" label="Own"> </topic>
+		<topic href="html/Help.html#AuthorizationAnchor" label="Authorization"> </topic>
+	</topic>
+	<topic href="html/Help.html#AutomatedAnalysisAnchor" label="Automated Analysis">
+		<topic href="html/Help.html#ConsistencyAnalysisAnchor" label="Consistency Analysis"> </topic>
+  		<topic href="html/Help.html#ChecksConsistencyAnalysisAnchor" label="Checks for Consistency Analysis"> </topic>
+		<topic href="html/Help.html#SecurityAnalysisAnchor" label="Security Analysis"> </topic>
+  		<topic href="html/Help.html#ChecksSecurityAnalysisAnchor" label="Checks for Security Analysis"> </topic>
+		<topic href="html/Help.html#RiskAnalysisAnchor" label="Risk Analysis"> </topic>
+		<topic href="html/Help.html#ChecksRiskAnalysisAnchor" label="Checks for Risk Analysis"> </topic>
+	</topic>
+	<topic href="html/Help.html#ReportAnchor" label="Creation of the Security Requirements Document"></topic>
+ 	<topic href="html/Help.html#ThreatRepositoryAnchor" label="Threat repository">
+    	<topic href="html/Help.html#ConfigureThreatRepositoryAnchor" label="Configuring the threat repository"> </topic>
+    	<topic href="html/Help.html#UseThreatRepositoryAnchor" label="Use of the threat repository"> </topic>
+ 	</topic>
+	<topic href="html/Help.html#ShortcutAnchor" label="Shortcut common tasks"> </topic>
+	<topic href="html/Help.html#CompatibilityAnchor" label="Compatibility with version 1.1.x"> </topic>
+</toc>

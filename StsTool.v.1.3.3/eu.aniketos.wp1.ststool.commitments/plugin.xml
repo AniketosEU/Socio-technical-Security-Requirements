@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="STS Views"
+            id="eu.anuketos.wp1.ststool.views.category">
+      </category>
+      <view
+            allowMultiple="false"
+            category="eu.anuketos.wp1.ststool.views.category"
+            class="eu.aniketos.wp1.ststool.commitments.view.part.CommitmentsView"
+            icon="icons/sample.gif"
+            id="eu.anuketos.wp1.ststool.view.commitmentview"
+            name="Security Requirements"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="eu.aniketos.wp1.ststool.diagram.extensionpoint_plugin">
+      <DiagramObserver
+            class="eu.aniketos.wp1.ststool.commitments.manager.CommitmentPlugin">
+      </DiagramObserver>
+      <ViewContributor
+            viewID="eu.anuketos.wp1.ststool.view.commitmentview">
+      </ViewContributor>
+   </extension>
+ <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Generate Security Requirements Specification (SRS)"
+            id="generatesrs"
+            name="Generate SRS">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:diagram?after=exportimage">
+         <command
+               commandId="generatesrs"
+               icon="icons/exportSRS.gif"
+               style="push"
+               tooltip="Generate Security Requirements Specification (SRS)">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeEditorId">
+                  <equals
+                        value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+                  </equals>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:file?after=additions">
+         <command
+               commandId="generatesrs"
+               icon="icons/exportSRS.gif"
+               style="push"
+               tooltip="Generate Security Requirements Specification (SRS)">
+               <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeEditorId">
+                  <equals
+                        value="eu.aniketos.wp1.ststool.diagram.part.StsToolDiagramEditorID">
+                  </equals>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="eu.aniketos.wp1.ststool.commitments.handler.ExportSRSHandler"
+            commandId="generatesrs">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="generatesrs"
+            schemeId="eu.aniketos.wp1.ststool.diagram.keybinding.scheme"
+            sequence="M1+T">
+      </key>
+   </extension>
+</plugin>

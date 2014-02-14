@@ -1,0 +1,3021 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<title>STS-Tool Online Help</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:22.7pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:72.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-72.0pt;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Testo commento Carattere";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:32.2pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Corpo testo Carattere";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Soggetto commento Carattere";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Testo fumetto Carattere";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.CorpotestoCarattere
+	{mso-style-name:"Corpo testo Carattere";
+	mso-style-link:"Corpo testo";}
+p.Text, li.Text, div.Text
+	{mso-style-name:Text;
+	mso-style-link:"Text Char";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+span.TextChar
+	{mso-style-name:"Text Char";
+	mso-style-link:Text;}
+span.hps
+	{mso-style-name:hps;
+	font-family:"Times New Roman","serif";}
+span.longtextshorttext
+	{mso-style-name:"long_text short_text";
+	font-family:"Times New Roman","serif";}
+span.longtext
+	{mso-style-name:long_text;
+	font-family:"Times New Roman","serif";}
+span.shorttext
+	{mso-style-name:short_text;
+	font-family:"Times New Roman","serif";}
+span.TestofumettoCarattere
+	{mso-style-name:"Testo fumetto Carattere";
+	mso-style-link:"Testo fumetto";
+	font-family:"Tahoma","sans-serif";}
+span.CarattereCarattere7
+	{mso-style-name:" Carattere Carattere7";}
+p.Referencenumber, li.Referencenumber, div.Referencenumber
+	{mso-style-name:"Reference number";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:32.2pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Times New Roman","serif";}
+p.1texte-text, li.1texte-text, div.1texte-text
+	{mso-style-name:">1\: texte-text";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:2.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:14.0pt;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";}
+p.Definitionsource, li.Definitionsource, div.Definitionsource
+	{mso-style-name:"Definition source";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-14.2pt;
+	line-height:14.0pt;
+	font-size:8.0pt;
+	font-family:"Arial","sans-serif";
+	display:none;}
+span.TestocommentoCarattere
+	{mso-style-name:"Testo commento Carattere";
+	mso-style-link:"Testo commento";}
+span.SoggettocommentoCarattere
+	{mso-style-name:"Soggetto commento Carattere";
+	mso-style-link:"Soggetto commento";
+	font-weight:bold;}
+p.AppendixH2, li.AppendixH2, div.AppendixH2
+	{mso-style-name:"Appendix H2";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-1.0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=IT link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=352 height=143 id="Picture 1" src="Help_image001.png" alt=logo-StS></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:22.0pt;text-transform:uppercase'>Socio-Technical Security </span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:22.0pt;text-transform:uppercase'>Modelling Tool</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:20.0pt'>User Guide</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR
+style='font-size:16.0pt'>Version 1.3.3</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR
+style='font-size:20.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR
+style='font-size:16.0pt'>Contact: ststool@disi.unitn.it</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>Released
+14/02/2014</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<b><span lang=EN-US style='font-size:10.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="introAnchor" />
+<h1><a name="_Toc380051498"><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Introduction</span></a></h1>
+
+<p class=MsoBodyText><span lang=EN-GB>The Socio-Technical Security Modelling
+Tool (STS-Tool) is a standalone application written in java and based on the
+Eclipse Rich Client Platform (RCP) Engine. It is distributed as a compressed
+archive for multiple platforms and it is free to download from the STS-Tool web
+</span><span lang=EN-GB style='line-height:107%'>site</span><a href="#_ftn1"
+name="_ftnref1" title=""><span class=MsoFootnoteReference><span lang=EN-US
+style='line-height:107%'><span class=MsoFootnoteReference><span lang=EN-US
+style='font-size:11.0pt;font-family:"Times New Roman","serif"'>[1]</span></span></span></span></a><span
+lang=EN-GB style='line-height:107%'>.</span><span lang=EN-GB> The website
+includes the source code of the tool, released under the APGL (Affere General
+Public License) open source software license. STS-Tool requires the
+installation of a Java Virtual Machine<a href="#_ftn2" name="_ftnref2" title=""><span
+class=MsoFootnoteReference><span style='vertical-align:baseline'><span
+class=MsoFootnoteReference><span lang=EN-GB style='font-size:11.0pt;font-family:
+"Times New Roman","serif";vertical-align:baseline'>[2]</span></span></span></span></a>
+version 6.26 or above. Previous versions of the tool (1.0.4, 1.0.5, 1.1.0, 1.1.1
+and 1.2.0) are also available online<a href="#_ftn3" name="_ftnref3" title=""><span
+class=MsoFootnoteReference><span style='vertical-align:baseline'><span
+class=MsoFootnoteReference><span lang=EN-GB style='font-size:11.0pt;font-family:
+"Times New Roman","serif";vertical-align:baseline'>[3]</span></span></span></span></a>.
+</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>As a first step, extract the content of
+the archive, which contains the tool binaries, to a folder on your PC (or MAC).
+Then, run the launcher file (StsTool</span><span lang=EN-US>) - no setup is
+needed. A splash screen with the tool logo and the tool version appears in the
+middle of your screen indicating that the program is loading (</span><span lang=EN-US>Figure 1</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:8.0pt'><img width=394 height=255 src="Help_image002.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324163881"></a><a name="_Ref324163886"><span lang=EN-US>Figure </span></a><span lang=EN-US>1</span><span lang=EN-US>: STS-Tool loading</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span class=CorpotestoCarattere><span lang=EN-GB>Then, you
+will be asked to read and accept the terms of use. Read it carefully, select
+the check box on the bottom and click the button “I Agree”. The tool will show
+you a welcome page, with useful information and a change log describing
+differences from previous versions (</span></span><span
+class=CorpotestoCarattere><span lang=EN-GB>Figure 2</span></span><span
+lang=EN-US>: STS-Tool welcome page</span><span class=CorpotestoCarattere><span
+lang=EN-GB>). By clicking the button “Decline”, you will close the program.</span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324163970"><span lang=EN-US><img width=605 height=470
+src="Help_image003.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref379981629"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>2</span><span lang=EN-US>: STS-Tool welcome page</span></p>
+
+<b><span lang=EN-GB style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="GUIOverviewAnchor" />
+<h1><a name="_Toc380051499"><span lang=EN-GB>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>GUI Overview</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-US>This section presents the Graphical User
+Interface (GUI) of the STS-Tool, and shows how to specify security
+requirements. The modeling language is described extensively in the STS-Tool
+Modeling Language document</span><a href="#_ftn4" name="_ftnref4" title=""><span
+class=MsoFootnoteReference><span lang=EN-US style='font-size:10.0pt'><span
+class=MsoFootnoteReference><span lang=EN-US style='font-size:10.0pt;font-family:
+"Times New Roman","serif"'>[4]</span></span></span></span></a><span lang=EN-US>.</span></p>
+
+<a id="CreatingNewDiagramAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051500"><span lang=EN-US>2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Creating a new diagram</span></a></h2>
+
+<p class=MsoBodyText><span lang=EN-US>To create a new diagram, click the “File”
+menu and then “New Diagram” (</span><span lang=EN-US>Figure 3</span><span
+lang=EN-US>). </span><span lang=EN-GB>A wizard will ask you to enter a new file
+name (a default name will appear), then press “Finish” (</span><span lang=EN-GB>Figure 4</span><span lang=EN-GB>). </span></p>
+
+<p class=MsoBodyText><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324164174"></a><a name="_Ref355608553"><span lang=EN-US><img
+width=388 height=301 src="Help_image004.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref379981732"></a><a name="_Ref379981737"><span lang=EN-US>Figure </span></a><span lang=EN-US>3</span><span lang=EN-US>: Creating a new diagram</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=387 height=313 id="Picture 31" src="Help_image005.jpg" alt="Image_03"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324164256"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>4</span><span lang=EN-US>: Naming a new diagram</span></p>
+
+<a id="WorkEnvironmentOverviewAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051501"><span lang=EN-US>2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Work environment overview</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>shows how the STS-Tool looks like when a
+new diagram is created. The work environment is horizontally split into three
+areas. </span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>The upper area contains the <b>Menu Bar</b>
+     and the <b>Toolbar</b>; </span></li>
+ <li class=MsoNormal><span lang=EN-US>The middle area or the drawing area
+     contains the <b>Canvas</b> and the <b>Palette</b>;</span></li>
+ <li class=MsoNormal><span lang=EN-US>The lower area contains the <b>Outline
+     Tab</b> and the <b>Property Tab</b>.</span></li>
+</ul>
+
+<p class=MsoBodyText><span lang=EN-GB>The name of the tool and its version are
+shown in the topmost application bar (</span><span
+lang=EN-GB>Figure 5</span><span lang=EN-GB>). Below, you can find a Menu Bar,
+with different entry divided by functionality:</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>File: manipulating (e.g., saving and
+     loading) STS-Tool files on storage devices;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Edit: modify the current diagram;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Window: change and customize the program
+     appearance;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Help.</span></li>
+</ul>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324168973"></a><a name="_Ref324168794"><span lang=EN-US><img
+width=642 height=351 src="Help_image006.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref379981795"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>5</span><span lang=EN-US>: STS-Tool overview</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Under the <b>Menu Bar</b> you can find the <b>Toolbar</b>,
+which enables quick access to common functionalities: such as save, undo, redo,
+export and switch to different views (Social [default], Information and Authorisation).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+class=hps><span lang=EN-US><img width=280 height=25 id="Picture 8"
+src="Help_image007.jpg"></span></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US>Figure
+</span><span lang=EN-US>6</span><span lang=EN-US>: Buttons to select a different
+view</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>In the drawing area, you can model your
+scenario using the Diagram editors. The STS-Tool supports multiple editors, so
+to model or open different diagram at the same time. For each diagram a new
+Editor Tab is added. Each editor is composed by a <b>Canvas Area</b> and a <b>Palette</b>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The first area (<b>Palette</b>), on the
+right, enables quick access to common component (i.e., elements and relations
+between them). The palette contains different tools that provide specific
+functionalities to support the analyst (tools are also grouped).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>In the first group there are the standard
+tools, used to select, zoom and add notes (</span><span
+lang=EN-US>Figure 7</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=Text align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=170 height=32 id="Picture 34" src="Help_image008.jpg"
+alt="Image_06"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324169369"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>7</span><span lang=EN-US>: Palette area, standard tools</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The second group contains the tool used to
+create elements (</span><span lang=EN-US>Figure 8</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=Text align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=147 height=117 id="Picture 35" src="Help_image009.jpg"
+alt="Image_07"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324169363"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>8</span><span lang=EN-US>: Palette area, drawing elements</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The third group contains the tool used to
+create relations between elements (</span><span
+lang=EN-US>Figure 9</span><span lang=EN-US>). </span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=Text align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=158 height=320 src="Help_image010.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324169354"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>9</span><span lang=EN-US>: Palette area, relations</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>A more detailed description of Elements and
+relations is provided in the next paragraphs. </span></p>
+
+<p class=MsoNormal><span lang=EN-US>The main part of the tool is dedicated the
+diagram <b>Canvas</b>, where diagrams are shown. Under the editor area you can
+find the <b>Outline Tab</b> and the <b>Property Tab</b>. The <b>Property Tab</b>
+enables adding descriptions and setting properties for elements and
+relationships in a diagram. The <b>Outline Tab</b> is used to navigate trough
+the diagram in zooming mode.</span></p>
+
+<b><span lang=EN-GB style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="modelingScenarioAnchor" />
+<h1><a name="_Toc380051502"><span lang=EN-GB>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>Modeling a scenario</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-US>In this section, we describe how to carry
+out modeling with the STS-Tool. In particular, we show how to add elements and
+relations and how to set their properties. </span></p>
+
+<a id="AddingElementsAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051503"><span lang=EN-US>3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Adding Elements</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>To add a new element, please follow the
+following four steps (</span><span
+lang=EN-US>Figure 10</span><span lang=EN-US>):</span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span lang=EN-US>Select an element from the palette area
+     with the mouse (Elements group); just click on the element;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Move the mouse cursor over the diagram
+     canvas (the cursor will change its icon);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Click with the left mouse button on the
+     point where you want to add your element; </span></li>
+ <li class=MsoNormal><span lang=EN-US>The new element is added and you are
+     asked to insert a new name. Afterwards you can press “enter” or click
+     outside the element to automatically return to the “Selection tool”.
+     (Note: the name must be unique among all elements of the same type).</span></li>
+</ol>
+
+<p class=MsoBodyText style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:36.0pt;line-height:normal'><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=611 height=224 id="Picture 37" src="Help_image011.jpg"
+alt="Image_09"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324169444"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>10</span><span lang=EN-US>: Assigning a name to an element</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>To rename an element you can simply select
+the element with a click or double click (be sure to have the selection tool
+active) and type a new name, or press “F2” to edit the current name. </span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Note 1</span></b><span lang=EN-US>:            
+While creating elements you can press the “Ctrl” (“apple” on Macintosh) button
+to create a sequence of elements, without having to select the “Element
+creation tool” every time.</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Note 2</span></b><span lang=EN-US>:            
+As you will see later, not all elements can be created on the canvas. Look at
+the section “Elements and Relations descriptions” which has a detailed
+description of every element.</span></p>
+
+<a id="AddingRelationsAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051504"><span lang=EN-US>3.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Adding Relations</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>A relation is a link between two elements,
+so to create it you must have at least two different elements to relate. Follow
+these steps to create a new Relation:</span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span lang=EN-US>Select with the mouse a relation from the
+     palette area (Relations group); just click on the element;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Move the mouse cursor over the first
+     element (source);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Click with the mouse, and keeping the
+     button pressed, drag to the second element (target);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Release the mouse button when over the
+     target.</span></li>
+</ol>
+
+<p class=MsoNormal><span lang=EN-US>The relation is now created (</span><span lang=EN-US>Figure 11</span><span lang=EN-US>). </span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'><img width=642 height=341
+src="Help_image012.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324169824"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>11</span><span lang=EN-US>: Steps to create a relation</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Use the <i>Property Tab</i> to add a
+description of the relation properties (when adding a delegation, for instance,
+the properties view is used to define the delegated goal).</span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>Note:   </span></b><span lang=EN-US>Each
+relation has its own creation constraint. Look at the section “Elements and
+Relations descriptions” for more details.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>A more complex case occurs when you create
+a relation of provision or delegation. To do this:</span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span lang=EN-US>Select a relation from the palette area with
+     the mouse (Relations group); just click on the element;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Move the mouse cursor over the first
+     element (source) goal or information;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Click with mouse, and keeping the button
+     pressed, drag to the second element (target) agent or role (see </span><span lang=EN-US>Figure 12</span><span lang=EN-US>-a);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Release the mouse button when over the
+     target (see </span><span lang=EN-US>Figure 12</span><span lang=EN-US>-b
+     for the created relation).</span></li>
+</ol>
+
+<p class=MsoBodyText align=center style='margin-left:33.0pt;text-align:center;
+text-indent:-33.0pt;line-height:normal'><b><span lang=EN-US>&nbsp;</span></b></p>
+
+<p class=MsoBodyText align=center style='margin-left:33.0pt;text-align:center;
+text-indent:-33.0pt;line-height:normal'><b><span lang=EN-US><img width=460
+height=284 src="Help_image013.jpg"></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>(a)</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=476 height=261 src="Help_image014.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US>(b)</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc303955200"></a><a name="_Ref303945200"><span lang=EN-US>Figure </span></a><span lang=EN-US>12</span><span lang=EN-US>: Steps for adding a delegation</span><span
+lang=EN-US> / provision</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<a id="SettingPropertiesAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051505"><span lang=EN-US>3.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Setting properties</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>Once an element or a relation is created,
+the tool assigns default values to its properties. To change the value of a
+property, use the Property Tab (</span><span
+lang=EN-US>Figure 13</span><span lang=EN-US>)</span><span class=hps><span
+lang=EN-US style='font-size:10.0pt'>.</span></span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span class=hps><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></span></p>
+
+<p class=Text align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=629 height=125 id="Picture 69" src="Help_image015.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref313352443"></a><a name="_Ref324170242"><span lang=EN-US>Figure </span></a><span lang=EN-US>13</span><span lang=EN-US>: Property detail</span><span lang=EN-US>s</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Elements and relations also have different
+inner properties, which can be viewed and edited using the Property Tab. To
+enable this, select the element or the relation in the diagram. </span></p>
+
+<p class=MsoNormal><span lang=EN-US>The “Property Tab” is a table with two columns.
+The first column displays the name of the property of that element, and the
+second shows the value of that property. First select in the diagram the
+element you want to modify, and then go to the property tab. In </span><span lang=EN-US>Figure 13</span><span lang=EN-US>, you can see how the “Property Tab”
+looks for a “Role”. In the upper corner, you can see the name of the type of
+the selected element. Clicking on a value cell of a specific property, you can
+input the new value for the property. The type of the editor can be different
+based on the type of the property. Look at the section “Elements and Relations
+descriptions” for more details about properties.</span></p>
+
+<a id="ViewsAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051506"><span lang=EN-US>3.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Views</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>Views permit various aspects of a model to be
+separated to simplify the modeling activity. Each view has an independent
+layout, meaning that the position of elements and their size are
+view-dependent. To switch from one view to another, just use the toolbar buttons
+(</span><span lang=EN-US><img width=508 height=104 src="Help_image016.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure</span><span lang=EN-US> 14</span><span
+lang=EN-US>). The default view when you create a new diagram is the social
+view. When switching to a different view, the content of the canvas changes, by
+hiding/showing the elements and relations available in such a view. Similarly,
+each view has a specific palette that enables elements/relations related to the
+current view to be added.</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc303955201"></a><a name="_Ref324170324"><span lang=EN-US><img
+width=508 height=104 src="Help_image017.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US>Figure
+</span><span lang=EN-US>14</span><span lang=EN-US>: View switching palette</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<a id="FrequentoperationsAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051507"><span lang=EN-US>3.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Frequent operations (delete, moving and renaming)</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>Element deletion can be done in two
+different ways, either by keyboard or mouse:</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Keyboard: select the element/relations
+     you want to delete and press button “Del”;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Mouse: select the element/relations,
+     “right-click” and select “Delete” from the menu (</span><span
+     lang=EN-US>Figure 15</span><span lang=EN-US>).</span></li>
+</ul>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US><img width=218 height=95 id="Picture 72" src="Help_image018.jpg"><a
+name="_Toc303955204"></a></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324170435"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>15</span><span lang=EN-US>: Deleting an element/relationship</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US>Warning</span></u><span lang=EN-US>: not
+all elements can be removed, to avoid cascade deletions. However, the STS-Tool supports
+users by introducing pop-ups to warn about this. As an example consider the
+deletion of a delegated goal / provided document. The goal/document that
+automatically appears in the delegatee actor scope cannot be deleted. To delete
+it, the associated delegation/provision needs to be deleted first. This concept
+applies recursively. Take a delegated goal / provided document that has been re-delegated/provided.
+The original delegation or provision cannot be deleted until the
+re-delegation/re-provision is removed.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Users can drag-and-drop elements and
+relations. Elements can be moved by selecting them and dragging them to a new
+position. While dragging a phantom figure shows the new location of the element
+if the mouse were to be released (</span><span
+lang=EN-US>Figure 16</span><span lang=EN-US>).</span></p>
+
+<p class=Text align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=184 height=93 id="Picture 40" src="Help_image019.jpg"
+alt="Image_47"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324170412"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>16</span><span lang=EN-US>: Moving an element/relationship</span></p>
+
+<p class=Text style='line-height:normal'><span lang=EN-US style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Note that when an element is moved from one
+actor scope to another one (i.e. goal or document), a side effect occurs: the
+actor who wants (possesses) the goal (document) changes. Notice that elements
+that are in a compartment area can’t be dragged out or inside another
+compartment.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>While copying/pasting elements is not
+supported by this version of STS-Tool, renaming is. An element can be renamed
+in two ways:</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Select the element to rename and press
+     F2. The agent’s label is highlighted and the user can define the new name;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Double click on the element. The agent’s
+     label is highlighted and the user can define the new name (see </span><span lang=EN-US>Figure 17</span><span lang=EN-US>).</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span lang=EN-US>This version of
+the STS-Tool not allows for multiple elements of the same type to have the same
+name.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US><img width=152 height=100 id="Picture 73" src="Help_image020.jpg"><a
+name="_Toc303955205"></a><a name="_Ref303948100"></a></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref355609554"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>17</span><span lang=EN-US>: Renaming an </span><span lang=EN-US>element</span></p>
+
+<b><span lang=EN-GB style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="ElementsRelationsAnchor" />
+<h1><a name="_Toc380051508"><span lang=EN-GB>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>Elements and Relations</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-US>We describe here how to create elements and
+relations.</span></p>
+
+<a id="AgentERoleAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051509"><span lang=EN-US>4.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Agent &amp; Role</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>Agents and roles are similar elements from
+a modeling point of view and for simplicity here often we just focus on agents.
+An agent can be created with the “Agent tool”. It is represented with a pink
+circle with a horizontal line running across it. It is visible in all the
+views, and can be created only on the diagram canvas.</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=451 height=325 id="Picture 41" src="Help_image021.jpg"
+alt="Image_12"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324170868"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>18</span><span lang=EN-US>: Graphical representations (expanded/collapsed)
+of agents and roles</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>As shown in </span><span
+lang=EN-US>Figure 18</span><span lang=EN-US>, an agent can be shown in two
+different ways: “Expanded” and “Collapsed” form. In the expanded form a grey
+circle is visible under the element. This area represents the compartment where
+other elements such as goals and documents can be inserted. The collapsed form
+hides the compartment and all elements inside it. To switch between these
+visualizations you can use the little arrow placed on the top left corner of
+the element’s selection bound (</span><span
+lang=EN-US>Figure 19</span><span lang=EN-US>) - Note: the element must be
+selected in order to see the arrow.</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=322 height=233 id="Picture 42" src="Help_image022.jpg"
+alt="Image_13"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324170932"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>19</span><span lang=EN-US>: Switching between the expanded and
+collapsed visualizations</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Properties available for the agent are (</span><span lang=EN-US>Figure 20</span><span lang=EN-US>):</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: a text field containing a
+     general description of the Agent;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Abilities: a text field to describe the
+     Agent’s abilities;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Other Important Features: a text field to
+     describe other important features of the Agent;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Possessed Certifications and
+     Accreditations: a text field to describe certification and accreditations
+     of the Agent;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Type Of Organization: a text field to
+     describe the type of organization of the Agent.</span></li>
+</ul>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=637 height=125 id="Picture 74" src="Help_image023.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324170998"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>20</span><span lang=EN-US>: Properties for an agent</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<a id="GoalAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051510"><span lang=EN-US>4.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Goal</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>A Goal</span><span lang=EN-US> can be
+created with the “Goal tool”. It is represented with a green rounded rectangle.
+It is visible in the social view and can be created only inside an agent or a
+role compartment (</span><span
+lang=EN-US>Figure 21</span><span lang=EN-US>).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=159 height=139 src="Help_image024.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324171611"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>21</span><span lang=EN-US>: Goal representation</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=376 height=144 src="Help_image025.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324171746"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>22</span><span lang=EN-US>: Goal properties</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=224 height=185 src="Help_image026.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref330543654">Figure </a>23: Goal Capability</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=167 height=146 src="Help_image027.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324171852"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>24</span><span lang=EN-US>: An agent with the capability to achieve a
+goal</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>When an agent has the capability to achieve
+a goal (True value in the property box – </span><span
+lang=EN-US>Figure 22</span><span lang=EN-US>), the goal is displayed with a
+green check in the bottom right corner of the goal (</span><span
+lang=EN-US>Figure 24</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Properties available for a goal are:</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: A text field containing a
+     general description of the goal;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Capability: A true/false field that
+     represents the capability of the goal in achieving the goal (see </span><span lang=EN-US>Figure 23</span><span lang=EN-US>);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Pre Conditions: A text field describing
+     the pre-conditions that must be true to achieve the goal;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Post Conditions: A text field describing
+     the post-conditions that become true when the goal is achieved.</span></li>
+</ul>
+
+<a id="DocumentAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051511"><span lang=EN-US>4.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Document</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>A Document</span><span lang=EN-US> can be
+created with the “Document tool”. It is represented with a grey rectangle with
+a solid border. It is visible both in the social view and in the information
+view, and can be created only inside an agent or role compartment (</span><span lang=EN-US>Figure 25</span><span lang=EN-US>).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=154 height=125 src="Help_image028.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172033"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>25</span><span lang=EN-US>: Document representation</span></p>
+
+<p class=MsoBodyText style='margin-left:126.5pt;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Properties available for a document are (</span><span lang=EN-US>Figure 26</span><span lang=EN-US>):</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: A text field containing a
+     general description of the document.</span></li>
+ <li class=MsoNormal><span lang=EN-US>Provided From: information about the
+     roles/agents that provide the document;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Provided To: information about the
+     roles/agents to whom the document is provided; </span></li>
+</ul>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=515 height=145 src="Help_image029.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172067"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>26</span><span lang=EN-US>: Document properties</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<a id="InformationAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051512"><span lang=EN-US>4.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Information</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>An Information</span><span lang=EN-US> can
+be created with the “Information tool”. It is represented with a grey rectangle
+with a dashed border. It is visible in the information view and in the authorisation
+view, and can be created only on the canvas (</span><span
+lang=EN-US>Figure 27</span><span lang=EN-US>).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=99 height=57 src="Help_image030.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172194"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>27</span><span lang=EN-US>: Information representation</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>There are no special properties for this
+element, only the Description: a text field containing a general description of
+the element (</span><span lang=EN-US>Figure 28</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=548 height=130 id="Picture 79" src="Help_image031.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172229"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>28</span><span lang=EN-US>: Information properties</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="EventAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051513"><span lang=EN-US>4.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Event</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>An Event</span><span lang=EN-US> can be
+created with the “Event tool”. It is represented with a red triangle. It is
+visible in the social view and can be created only on the canvas (</span><span lang=EN-US>Figure 29</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=46 height=48 src="Help_image032.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172403"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>29</span><span lang=EN-US>: Event representation</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The properties (see </span><span lang=EN-US>Figure 30</span><span lang=EN-US>) available for an event are:</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: A text field containing a
+     general description of the element;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Countermeasures: A text field to insert
+     the countermeasures to prevent this event.</span></li>
+</ul>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=508 height=123 id="Picture 81" src="Help_image033.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172420"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>30</span><span lang=EN-US>: Event properties</span></p>
+
+<a id="NeedProduceModifyAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051514"><span lang=EN-US>4.6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Need / Produce / Modify</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>These relations can be created respectively
+with the “Need tool”, “Produce tool” and “Modify tool”. They are visible only
+in the social view and they are graphically represented by a simple arrow with
+the corresponding label in the middle (</span><span
+lang=EN-US>Figure 31</span><span lang=EN-US>). The source of these relations
+must be a goal</span><span class=MsoCommentReference><span lang=EN-US
+style='font-size:8.0pt'>,</span></span><span lang=EN-US> the target must be a document,
+and they can be drawn only within the scope of an actor, as they represent
+actors’ intentions on using, modifying, or producing documents to achieve their
+goals. Only Description is available as a property (a text field containing a
+general description of the element).</span></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=192 height=10></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=264 height=148 src="Help_image034.jpg"></td>
+ </tr>
+</table>
+
+<span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoCaption align=center style='margin-top:12.0pt;text-align:center'><a
+name="_Ref324172616"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>31</span><span lang=EN-US>: Graphical representation of the need /
+produce / modify relations</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="PositiveNegativeContributionAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051515"><span lang=EN-US>4.7<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Positive or negative contribution</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>These relations can be created respectively
+with the “Positive contribution” and “Negative contribution”. They are visible
+only in the social view and they are graphically represented by a simple arrow
+with label -- or ++ in the middle (</span><span
+lang=EN-US>Figure 32</span><span lang=EN-US>). Only Description is available as
+a property (a text field containing a general description of the element).</span></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=204 height=1></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=252 height=107 src="Help_image035.jpg" alt="Image_31"></td>
+ </tr>
+</table>
+
+<span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172625"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>32</span><span lang=EN-US>: Graphical representation of positive and
+negative contributions</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="GoalDecompositionAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051516"><span lang=EN-US>4.8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>OR Decomposition / AND Decomposition</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>These relations can be created respectively
+with the “OR Decomposition tool”, and “AND Decomposition tool. They are visible
+only in the social view. They are represented with a semicircle under the
+source goal and an arrow pointing the target goal. A label indicates the type
+of decomposition AND (</span><span
+lang=EN-US>Figure 33</span><span lang=EN-US>) or OR (</span><span
+lang=EN-US>Figure 34</span><span lang=EN-US>). The source and the target of
+these relations must be a Goal, and they cannot coexist on the same source
+goal. Only Description is available as property (a text field containing a
+general description of the element).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'><img width=194 height=132 src="Help_image036.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172834"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>33</span><span lang=EN-US>: Graphical representation of goal AND
+decomposition</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=188 height=127 src="Help_image037.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172841"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>34</span><span lang=EN-US>: Graphical representation of goal OR decomposition</span></p>
+
+<a id="PlayAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051517"><span lang=EN-US>4.9<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Play</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>This relation can be created with the “Play
+tool”. It is visible only in the social view and it is represented by a simple
+arrow with the label “Play” in the middle. The source of “Play” must be an
+Agent and the target must be a Role (</span><span
+lang=EN-US>Figure 35</span><span lang=EN-US>). Only Description is available as
+property (a text field containing a general description of the element).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=274 height=75 src="Help_image038.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172924"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>35</span><span lang=EN-US>: Graphical representation of the play
+relation</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="IncompatibleAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.10<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051518">Incompatible</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This relation can be created with the “Incompatible
+tool”. It is visible only in the social view and it is represented by a simple line
+with a circle in the middle with the label “&#8800;”. The source of “Incompatible”
+must be a Role and the target must be a Role (</span><span
+lang=EN-GB>Figure 36</span><span lang=EN-US>) or the source must be a Goal and
+the target must be a Goal (</span><span lang=EN-GB>Figure 37</span><span
+lang=EN-US>). Only Description is available as property (a text field
+containing a general description of the element).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=248 height=83 src="Help_image039.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref327790766"></a><a name="_Ref327790771"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>36</span><span lang=EN-GB>: Graphical representation of the
+incompatible relation between role</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB><img
+width=252 height=174 src="Help_image040.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref327790844"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>37</span><span lang=EN-GB>: Graphical representation of the
+incompatible relation between goals</span></p>
+
+<p class=MsoCaption><span lang=EN-GB>&nbsp;</span></p>
+
+<a id="CombineAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.11<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051519">Combine</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This relation can be created with the “Combine
+tool”. It is visible only in the social view and it is represented by a simple line
+with a circle in the middle with the label “=”.Since in STS-ml there are two
+levels for expressing incompatibility, either among roles or among goals, then
+in the first case the source must be a Role and the target must be a Role (</span><span lang=EN-US>Figure 38</span><span lang=EN-US>), while in the second case the source
+must be a Goal and the target must be a Goal (</span><span
+lang=EN-GB>Figure 39</span><span lang=EN-US>). Only Description is available as
+property (a text field containing a general description of the element).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=248 height=83 id="Picture 422" src="Help_image041.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref355602136"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>38</span><span lang=EN-US>: Graphical representation of the combine
+relation between roles</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB><img
+width=247 height=165 src="Help_image042.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref327790959"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>39</span><span lang=EN-GB>: Graphical representation of the combine
+relation between goals</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<a id="ProvisionAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.12<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-GB> </span><a name="_Toc380051520"><span
+lang=EN-US>Provision</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>A Provision can be created with the
+“Provision tool” and it is visible only in the social view. A provision is
+represented by a line, which has two arrows indicating the direction of the
+delegation, and a document in the middle. The source of this relation is an agent
+or a role and the target must also be an agent or a role (</span><span lang=EN-US>Figure 40</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=437 height=134 src="Help_image043.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324172985"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>40</span><span lang=EN-US>: Graphical representation of document
+provision</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Using the “Provision tool” is possible to
+create a provision starting from a Document. It will automatically create the
+provision form the Document’s parent to the target agent/role.</span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span lang=EN-US>Select with the mouse the relation
+     provision from the palette area (Relations group), just click on the
+     element;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Move the mouse cursor over the first
+     element (source) document;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Click with mouse, and maintain the button
+     pressed, while moving to the second element (target) agent or role (see </span><span lang=EN-US>Figure 41</span><span lang=EN-US> Step 1);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Release the mouse button when over the
+     target (see </span><span lang=EN-US>Figure 41</span><span lang=EN-US> Step
+     2 for the created relation).</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=469 height=162 src="Help_image044.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'>Step 1</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=490 height=150 src="Help_image045.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'>Step 2</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324173927"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>41</span><span lang=EN-US>: Steps 1 and 2 to create a document
+provision</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Properties available for the Provision are
+(</span><span lang=EN-US>Figure 42</span><span lang=EN-US>):</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: A text field containing a
+     general description of the provision;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Pre Conditions: A text field where to insert
+     the pre-conditions;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Post Conditions: A free text field where to
+     insert the post-conditions;</span></li>
+</ul>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=432 height=160 src="Help_image046.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324173996"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>42</span><span lang=EN-US>: Provision properties</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Other properties of a provision
+relationship are two Boolean values applied over the provision, namely
+“Integrity” and “Availability”. These can be enabled/disabled by right-clicking
+on the provided document (see the </span><span
+lang=EN-GB>Figure 43</span><span lang=EN-US> about the contextual menu).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=315
+height=103 src="Help_image047.png"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a
+name="_Ref328119217"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>43</span><span lang=EN-GB>: Document provision contextual menu</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>When the property “Integrity” is changed
+(the property indicates that the provider should guarantee the integrity of the
+provided document), a padlock appears in the picture of the document (</span><span lang=EN-GB>Figure 44</span><span lang=EN-US>).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=477 height=95 src="Help_image048.jpg"></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=469 height=99 src="Help_image049.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref328119797"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>44</span><span lang=EN-GB>: </span><span lang=EN-US>A provided
+document with associated security property, with or without security details</span></p>
+
+<p class=Text><span lang=EN-US>&nbsp;</span></p>
+
+<p class=Text><span lang=EN-US>To explicitly show the security details on the
+selected property, double-click on the padlock and the security need will
+appear just below the provided document. </span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>When you modify the “Availability” property
+(the property that indicates the required availability level for the provided
+document) a new item “Availability Value” appears in the Properties tab. See the
+</span>Figure 45<span lang=EN-US>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=642
+height=192 src="Help_image050.png"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341444270"></a><a name="_Ref355602531">Figure </a>45<span lang=EN-US>: Provision properties</span></p>
+
+<a id="DelegationAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.13<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> </span><a name="_Toc380051521"><span
+lang=EN-US>Delegation</span></a></h2>
+
+<a id="ThreatAnchor" />
+<p class=MsoNormal><span lang=EN-US>A delegation can be created with the
+“Delegation tool” and it is visible only in the social view. It is represented
+by a line with two arrows indicating the direction of the delegation and the
+goal in the middle. The source/target of a delegation can be either an agent or
+a role (</span><span lang=EN-US>Figure 46</span><span lang=EN-US>).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=593 height=216 id="Picture 89" src="Help_image051.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174114"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>46</span><span lang=EN-US>: Graphical representation for a goal
+delegation</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=Text><span lang=EN-US>Using the “Delegation tool” it is possible to
+create a delegation directly starting from a goal. It will automatically create
+the delegation from the goal’s parent to the target and it will include the
+goal in the target agent/role. </span></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span lang=EN-US>Select with the mouse the relation
+     delegation from the palette area (Relations group), just click on the
+     element;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Move the mouse cursor over the first
+     element (source) goal;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Click with mouse, and keeping the button
+     pressed, drag to the second element (target) agent or role (see </span><span lang=EN-US>Figure 47</span><span lang=EN-US> Step 1);</span></li>
+ <li class=MsoNormal><span lang=EN-US>Release the mouse button when over the
+     target (see </span><span lang=EN-US>Figure 47</span><span lang=EN-US> Step
+     2 for the created relation).</span></li>
+</ol>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=461 height=157 src="Help_image052.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'>Step 1</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=481 height=159 src="Help_image053.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'>Step 2</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174463"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>47</span><span lang=EN-US>: Steps 1 and 2 to create a goal
+delegation</span></p>
+
+<p class=MsoBodyText style='line-height:normal'><span lang=EN-US
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Other properties of a delegation
+relationship are the Boolean values of the delegation: “Non-Repudiation”,
+“Redundancy”, “No Delegation”, “Trustworthiness”, and “Availability”, the first
+two being specialized into different types as shown in </span><span
+lang=EN-US>Figure 48</span><span lang=EN-US>. Similarly the rest of the
+properties are selected. They can be enabled/disabled by right click on the
+delegated goal (see the </span><span lang=EN-US>Figure 48</span><span
+lang=EN-US> about the contextual menu). Trustworthiness and Availability, apart
+from being selected, need the specification of a minimum value in the
+properties tab of the goal delegation (see </span><span
+lang=EN-US>Figure 51</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'><img width=465 height=115
+src="Help_image054.jpg"></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><b><span
+lang=EN-US style='font-size:10.0pt'>Repudiation property</span></b></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'><img width=466 height=123
+src="Help_image055.jpg"></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><b><span
+lang=EN-US style='font-size:10.0pt'>Redundancy property</span></b></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174574"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>48</span><span lang=EN-US>: Goal delegation contextual menu</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>When you modify one of these properties, a padlock
+appears in the picture of the goal (</span><span
+lang=EN-US>Figure 49</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=409 height=88 src="Help_image056.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref355602836"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>49</span><span lang=EN-US>: A goal delegation with associate
+security properties</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left;line-height:normal'><span
+lang=EN-US>By double-clicking over the padlock, the selected security
+properties (needs) will be displayed below the delegated goal (</span><span lang=EN-US>Figure 50</span><span lang=EN-US>).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=400 height=78 src="Help_image057.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324188859"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>50</span><span lang=EN-US>: Security properties shown explicitly
+over goal delegations</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Properties available for the Delegation are
+(</span><span lang=EN-US>Figure 51</span><span lang=EN-US>):</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: A text field containing a
+     general description of the delegation;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Pre Conditions: A text field where to
+     describe the pre-conditions of the delegation;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Post Conditions: A text field where to
+     describe the post-conditions of the delegation;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Availability Level: An integer value
+     between 0 and 100 that indicates the required availability level for the
+     delegated goal. </span></li>
+ <li class=MsoNormal><span lang=EN-US>Minimum Trustworthiness Level: An integer
+     value, which indicates the level of trustworthiness the delegatee should
+     have for the delegator to delegate him the goal.</span></li>
+</ul>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US><img width=511 height=129 src="Help_image058.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174652"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>51</span><span lang=EN-US>: Delegation properties</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<a id="ThreatAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.14<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051522">Threat</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>The threat relation can be created with the
+“Threat tool” and it is visible only in the social view. It is represented by a
+simple arrow with a label in the middle (</span><span
+lang=EN-US>Figure 52</span><span lang=EN-US>). The source of this relation must
+be an event and the target can be an agent, role, goal, document or a delegation.
+Description is the only available property (a text field containing a general
+description of the element) for this element.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=451 height=181 src="Help_image059.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174719"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>52</span><span lang=EN-US>: Graphical representation for a threat</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="PartOfAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.15<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051523">Part Of</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>The PartOf relation can be created with the
+“Part Of tool” and it’s visible only in the Information view. It is represented
+by a simple arrow with a label “PartOf” in the middle (</span><span
+lang=EN-US>Figure 53</span><span lang=EN-US>). The source element can be a document
+and in that case the target must also be a document. Alternatively, if the
+source is a piece of information, the target must be a different piece of information.
+Only Description is available as a property (a text field containing a general
+description of the element).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=249 height=198 id="Picture 96" src="Help_image060.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174811"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>53</span><span lang=EN-US>: Graphical representation for a PartOf relation</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="MadeTangibleByAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.16<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051524">Tangible By</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>The TangibleBy relation can be created with
+the “Tangible By tool” which is visible only in the information view (</span><span lang=EN-US>Figure 54</span><span lang=EN-US>). It is represented by a simple
+arrow with the label “Tangible By” in the middle. The source must be a piece of
+information and the target a document. Only Description is available as a property
+(a text field containing a general description of the element).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=218 height=165 id="Picture 97" src="Help_image061.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324174908"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>54</span><span lang=EN-US>: Graphical representation for a “TangibleBy”
+relation</span></p>
+
+<a id="OwnAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.17<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051525">Own</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>The Own relation can be created with the
+“Own tool” and is visible in the Authorization view. It is represented by a
+line with a double arrow on the end (</span><span
+lang=EN-US>Figure 55</span><span lang=EN-US>). The source can be either an agent
+or a role and the target is an information entity. Only Description is
+available as a property (a text field containing a general description of the
+element).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=146 height=106 id="Picture 98" src="Help_image062.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324175641"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>55</span><span lang=EN-US>: Graphical representation for an “Own” relation</span></p>
+
+<a id="AuthorizationAnchor" />
+<h2 style='text-indent:0cm'><span lang=EN-US>4.18<span style='font:7.0pt "Times New Roman"'>
+</span></span><span lang=EN-US> <a name="_Toc380051526">Authorisation</a></span></h2>
+
+<p class=MsoNormal><span lang=EN-US>An Authorization is created with the
+“Authorization tool” and is visible only in the Authorization view. The source
+and the target can be either an agent or a role. It is represented by an arrow
+and in the middle a box divided into three different areas (</span><span lang=EN-US>Figure 56</span><span lang=EN-US>). The upper area contains the list
+of pieces of information for which the authorization refers to. The lower box represents
+the “scope”, and </span><span lang=EN-US>contains a <span class=hps>list</span><span
+class=longtext> </span><span class=hps>of goals</span><span class=longtext> </span><span
+class=hps>for which</span><span class=longtext> </span><span class=hps>the </span>authorization
+<span class=hps>is</span><span class=longtext> </span></span><span lang=EN-US>valid.
+The top part is subdivided into four small boxes containing the four
+properties: Use, Modify, Produce, and Distribute (settable by a double-click).</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US><img
+width=397 height=98 id="Picture 106" src="Help_image063.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324175685"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>56</span><span lang=EN-US>: Graphical representation for an authorisation</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+class=hps><b><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></b></span></p>
+
+<p class=MsoNormal><span lang=EN-US>To select the information, double click in
+the upper area and select all information entities you want to authorise the
+target agent/role (</span><span
+lang=EN-US>Figure 57</span><span lang=EN-US>) to act on. Likewise, to specify
+the goals for which the authorisation is valid, double click on the lower area
+and then select the goals</span><span class=hps><span lang=EN-US
+style='font-size:10.0pt'>. </span></span></p>
+
+<p class=MsoBodyText align=center style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:0cm;text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:0cm;text-align:center;line-height:normal'><span
+lang=EN-US><img width=435 height=273 src="Help_image064.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324175819"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>57</span><span lang=EN-US>: Dialog windows to specify goals in an authorisation</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;line-height:normal'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Properties available for an authorisation are
+(</span><span lang=EN-US>Figure 58</span><span lang=EN-US>):</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><span lang=EN-US>Description: A text field containing a
+     general description of the authorisation;</span></li>
+ <li class=MsoNormal><span lang=EN-US>Transferable: A Boolean value indicating
+     whether the authorisation can be further transferred. </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:0cm;text-align:center;line-height:normal'><span
+lang=EN-US><img width=501 height=114 id="Picture 16" src="Help_image065.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref324175799"><span lang=EN-US>Figure </span></a><span
+lang=EN-US>58</span><span lang=EN-US>: Authorisation properties</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="AutomatedAnalysisAnchor" />
+<h1><a name="_Toc380051527"><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Automated Analysis</span></a></h1>
+
+<p class=MsoBodyText><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-US>Apart from supporting modeling
+activities, STS-Tool is equipped with analysis capabilities, implementing the
+semantics of STS-ml. The analyses that are performed over STS diagrams are: </span></p>
+
+<p class=MsoBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Consistency analysis</span></i><span
+lang=EN-US>: perform syntactical checks over STS diagrams to verify that they
+comply with the semantics of STS-ml;</span></p>
+
+<p class=MsoBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Security analysis</span></i><span lang=EN-US>:
+after consistency analysis is run and does not verify any errors over STS
+models, the security analysis allows designers the possibility to verify
+whether the security properties expressed over the STS model can be satisfied
+over the designed model or not;</span></p>
+
+<p class=MsoBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Risk analysis</span></i><span lang=EN-US>:
+given a set of events threatening the various assets (being these goals or
+documents), the threat analysis calculates the propagation of these threats,
+that is, which other assets are affected by the considered events. </span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="ConsistencyAnalysisAnchor" />
+<h2 style='margin-left:8.5pt;text-indent:-8.5pt'><a name="_Toc380051528"><span
+lang=EN-US>5.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Consistency Analysis</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>STS-Tool can evaluate automatically the
+diagram consistency. To launch a new consistency analysis, click the “Analysis”
+menu and then “Consistency Analysis” (</span><span
+lang=EN-GB>Figure 59</span><span lang=EN-US>). A wizard will be shown. The
+analysis starts when pressing the “RunAnalysis” button (see </span><span lang=EN-GB>Figure 59</span><span lang=EN-GB>Figure 69</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=434 height=104 src="Help_image066.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341447865"></a><a name="_Ref341447869"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>59</span><span lang=EN-GB>: Run a new consistency analysis</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='margin-right:-13.1pt;text-align:left'><span
+lang=EN-US><img width=299 height=274 id="Picture 13" src="Help_image067.jpg"></span><span
+lang=EN-US> </span><span lang=EN-US style='font-size:8.0pt'><img width=303
+height=276 id="Picture 11" src="Help_image068.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref355603793"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>60</span><span lang=EN-GB>: Consistency Analysis results </span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The Consistency Analysis output of the
+diagram (see </span><span lang=EN-GB>Figure 60</span><span lang=EN-US>)
+generate 3 type of output for every aspect related to the various tasks
+executed when checking the consistency of the diagram: NO ERRORS FOUND, WARNING
+FOUND, ERRORS FOUND.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>If you click on the Analysis Tab (see </span><span lang=EN-GB>Figure 61</span><span lang=EN-US>-a) the tool will visualise the list
+of Warnings or Errors. For every issue, double-clicking on the item in the list
+will show exactly the point in the diagram where the problem occurs (see </span><span lang=EN-GB>Figure 61</span><span lang=EN-US>-b).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=538 height=363 src="Help_image069.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>(a)</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB><img
+width=540 height=366 src="Help_image070.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>(b)</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341450432"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>61</span><span lang=EN-GB>: Consistency analysis details</span></p>
+
+<a id="ChecksConsistencyAnalysisAnchor" />
+<h2 style='margin-left:8.5pt;text-indent:-8.5pt'><a name="_Toc380051529"></a><a
+name="_Toc353439662"></a><a name="_Toc217666985"><span lang=EN-US>5.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Checks for Consistency Analysis</span></a><span lang=EN-US> </span></h2>
+
+<p class=Text><span lang=EN-US>The purpose of consistency analysis is to verify
+whether the diagram built by the designer is consistent and valid. A diagram is
+considered to be consistent if its constituent elements (concepts and
+relationships) are drawn and interconnected following the semantics of the
+modelling language (STS-ml). Thus, consistency analysis performs post checks to
+verify compliance with STS-ml semantics for all checks that cannot be performed
+live over the models. The following checks are performed during consistency
+analysis:</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Empty Diagram: </span></b><span lang=EN-US>this
+check verifies whether the given diagram is empty or not. If that is the case,
+then no other consistency checks are performed. If the diagram is not empty,
+the consistency analysis returns: “No errors found” and continues performing
+the rest of the checks.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Goal Single Decomposition: </span></b><span
+lang=EN-US>this check verifies the consistency of goal decompositions.
+Following the semantics of STS-ml a given goal is decomposed in to two or more
+subgoals. As a result, the decomposition should specify at least two subgoals.
+Therefore, goal single decomposition verifies whether there are cases of
+decompositions to a single subgoal.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Delegation Child Cycle:</span></b><span
+lang=EN-US> this check verifies the consistency of goal delegations, so that no
+cycles or loops are identified as a result of the delegatee decomposing the
+delegatum (delegated goal) and re-delegating back one of the subgoals.
+Delegation child cycle verifies exactly this and gives a warning in case of
+inconsistency.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Inconsistent Contribution Cycle: </span></b><span
+lang=EN-US>this check verifies whether there are loops of positive or negative
+contribution relationships, and whether this loop contains contradictory
+relationships. If such a loop is identified, the consistency analysis returns a
+warning.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Negative Contributions Between AND-subgoals: </span></b><span
+lang=EN-US>this check verifies that there are no negative contribution
+relationships between AND-subgoals of a given goal (within an actor’s scope).
+It returns a warning if such a case is identified.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Documents PartOf Cycle: </span></b><span
+lang=EN-US>this check verifies whether there is a loop or cycle of PartOfPart
+relationships starting from and ending at a given document. If a case like this
+is verified, a warning is returned enumerating the documents that form the
+cycle.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Informations PartOf Cycle: </span></b><span
+lang=EN-US>this check verifies whether there is a loop or cycle of PartOf
+relationships starting from and ending at a given document. If a case like this
+is verified, a warning is returned enumerating the documents that form the
+cycle.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Information No Ownership: </span></b><span
+lang=EN-US>this check verifies that all information entities have an owner. If
+there are cases of information without any ownership relationships from any
+actor in the diagram, the consistency analysis returns a warning.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Authorisations Validity:</span></b><span
+lang=EN-US> this check verifies that all authorisation relationship between two
+given actors are valid. An authorisation relationship specifies authorisations
+or permissions an actor grants to another on some information, to perform some
+allowed operations. The authorisations could be limited to a goal scope and
+they can be re-delegated or not. However, the first two attributes should be
+specified for an authorisation relationship to be valid. If there are no
+informational entities specified, the consistency analysis returns an error.
+The same applies to the cases, in which no allowed operations are specified.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Duplicate Authorisations:</span></b><span
+lang=EN-US> this check verifies that there are no duplicate authorisation
+relationships that could be merged. There are several cases that are addressed
+by this check: (i) we encounter two identical authorisation, i.e.., between the
+same roles, in the same direction, for the same set of information, allowed
+operations and goals, and having the same value of transferability; (ii)
+identify authorisation relationships between the same roles, in the same
+direction, in which one grants permissions that are a subset of the other
+authorisation’s relationship.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="SecurityAnalysisAnchor" />
+<h2 style='margin-left:8.5pt;text-indent:-8.5pt'><a name="_Toc380051530"><span
+lang=EN-US>5.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Security Analysis</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>STS-Tool can automatically analyze the
+security issues related to the diagram. To launch a new security analysis,
+click the “Analysis” menu and then “Launch Security Analysis” (</span><span lang=EN-GB>Figure 62</span><span lang=EN-US>). To start the analysis it is
+necessary to press the “Run Analysis” button (see </span><span
+lang=EN-GB>Figure 63</span><span lang=EN-US>) on the window that will appear;
+the wizard will then show all the analysis results of the diagram.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=455 height=101 src="Help_image071.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341453310"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>62</span><span lang=EN-GB>: Run a new security analysis</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=407 height=370 src="Help_image072.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341453324"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>63</span><span lang=EN-GB>: Security Analysis results</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=Text><span lang=EN-US>When executed, the Security Analysis
+automatically calls the Consistency Analysis and only if there are no Errors
+found, STS-Tool launches the Security Analysis. There are three types of output
+(see </span><span lang=EN-GB>Figure 63</span><span lang=EN-US>) for every
+aspect related to the security of the diagram: NO ERRORS FOUND, WARNING FOUND,
+ERRORS FOUND.</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US>If you
+click on the Analysis Tab (see </span><img width=569 height=360
+src="Help_image073.jpg"></p>
+
+<p class=MsoNormal><span lang=EN-US>Figure 64</span><span lang=EN-US>) the tool
+will visualise the list of Warnings or Errors. For every issue, with a double
+click on the item in the list, you can see the exact point in the diagram where
+the problem occurs.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341473343"><img width=569 height=360 src="Help_image074.jpg"></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'>Figure 64: <span lang=EN-GB>Security analysis details</span></p>
+
+<a id="ChecksSecurityAnalysisAnchor" />
+<h2 style='margin-left:8.5pt;text-indent:-8.5pt'><a name="_Toc380051531"><span
+lang=EN-US>5.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Checks for Security Analysis</span></a></h2>
+
+<p class=Text><span lang=EN-US>STS-ml allows for the specification of security
+needs over actors’ interactions. It currently supports a non-exhaustive set of
+security needs and organisational constraints, namely nonrepudiation,
+redundancy, no-delegation, non-usage, non-modification, non-production,
+nondisclosure and need-to-know. The purpose of security analysis is to verify
+whether the drawn diagram allows the satisfaction of the specified security
+needs or not. As a result, for all security needs expressed by stakeholders, it
+checks in the model whether there is any possibility for the security need to
+be violated. This analysis takes into account the semantics of STS-ml, defining
+the behavior of the different elements represented in the models. The elements’
+behavior is defined by propagation rules that consider what concepts and what
+relationships the specification of a given security need affects. Datalog is
+used to define the semantics of STS-ml to express facts (things always hold)
+and rules. In the following are provided the details for all the checks
+performed during security analysis:</span></p>
+
+<p class=Text><span lang=EN-US>&nbsp;</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>No_Delegation Violation: </span></b><span
+lang=EN-US>this violation is verified whenever a </span><span lang=EN-GB>delegatee</span><span
+lang=EN-US> actor further delegates a goal, over the delegation of which a
+no-delegation security need is specified from the delegator actor. Nodelegation
+is specified over a goal delegation by the delegator, who requires the
+delegatee not to further delegate the delegated goal. Therefore, to check for
+any violations of no delegation, the analysis searches for redelegations of the
+delegatum (delegated goal) or any of its subgoals.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-GB>Redundancy Violation:</span></b><b><span
+lang=EN-GB> </span></b><span lang=EN-US>this check verifies if redundancy is
+satisfied by controlling that single-actor-redundancy or multi-actor-redundancy
+are not violated. At design time we cannot make the distinction between
+fallback and true redundancy, so they cannot be verified at this stage.
+Therefore, both fallback redundancy single and true redundancy single are
+mapped to single actor redundancy.         <br>
+<i>Similarly for multi-actor-redundancy</i>. The analysis verifies a redundancy
+violation if one of the following occurs: (1) actor does not decompose the
+delegated goal in any or-subgoals, for which both types of redundancy are
+violated; (2) actor decomposes the goal into or-subgoals and delegates one to
+another actor when single actor redundancy has been specified, for which this
+type of redundancy is violated; (3) actor decomposes the goal into or-subgoals,
+but does not delegate any of the subgoals to another actor when multi actor
+redundancy has been specified, for which this type of redundancy is violated.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Pre-Analysis: Authorisation Conflict: </span></b><span
+lang=EN-US>this task identifies a conflict of authorisation whenever at least
+two authorisation relationships for the same information are drawn towards the
+same actor from two illegible actors (being the owner of information or another
+authorised actor) such that: (1) one limits the authorisation to a goal scope
+(requiring a need-to-know security need) and the other does not (authorising
+the actor without any limitations); (2) for the same goals or intersecting goal
+scopes, different permissions are granted in terms of operations or authority
+to transfer authoristaion. That is, one passes the actor the authority to perform
+operations (use, modify, produce, distribute) on a given information, and the
+other does not (requiring non-usage, non-modification, non-production,
+non-disclosure); one passes the actor the authority to further transfer authorisations
+and the other requires no further authorisations take place.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Pre-Analysis: Operation Violation: </span></b><span
+lang=EN-US>this task includes a set of checks that verify that no unathorised
+operations are performed by any actor.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Non_Disclosure Violation</span></i><span
+lang=EN-US>: this violation is detected whenever an actor discloses information
+without having the right to distribute it. Non-disclosure expresses the need of
+not disclosing or further distributing the given information to other actors,
+apart from the authoriser. Thus, authority to distribute the information is not
+passed. The way actors exchange information is through document provision. In
+order to disclose some information, an actor would have to provide to others
+the document(s) containing that information. Hence, to verify if there are any
+unauthorized disclosures of information, the analysis checks for provisions of
+documents representing the given information from any unauthorized actors
+towards other actors.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Non_Usage Violation</span></i><span
+lang=EN-US>: This violation is detected whenever an actor discloses information
+without having the right to distribute it. Non-disclosure expresses the need of
+not disclosing or further distributing the given information to other actors,
+apart from the authoriser. Thus, authority to distribute the information is not
+passed. The way actors exchange information is through document provision. In
+order to disclose some information, an actor would have to provide to others
+the document(s) containing that information. Hence, to verify if there are any
+unauthorized disclosures of information, the analysis checks for provisions of
+documents representing the given information from any unauthorized actors
+towards other actors.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Non_Modification Violation</span></i><span
+lang=EN-US>: this violation is detected whenever an actor modifies information
+without having the right to modify it. Non-modification expresses the need that
+information should not be changed (modified), i.e. authority to modify the
+information is not granted. To verify if there could be any violations of
+non-modification, the analysis looks if the authorisee (or an actor that is not
+authorised by authorised party) modifies the given information. For this, it
+searches for modify relationships from any goal of this actor to any document representing
+the given information. </span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Non_Production Violation</span></i><span
+lang=EN-US>: this violation is detected whenever an actor produces information
+without having the right to produce it. Non-production expresses the need that
+information should not be produced in any form, i.e. authority to produce the
+information is not granted. To verify if there could be any violations of
+non-production, the analysis checks whether if the authorisee (or an actor that
+is not authorised by authorised party) produces the given information. For
+this, it searches for produce relationships from any goal of this actor to any
+document representing the given information.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>NTK Violation</span></i><span lang=EN-US>:
+this violation is detected whenever an actor uses, modifies or produces
+information for other purposes (goal achievement) than the ones for which it is
+authorized. Need-toknow req</span><span class=TextChar><span lang=EN-GB
+style='font-size:12.0pt;line-height:107%'>u</span></span><span lang=EN-US>ires
+that the information is used, modified, or produced in the scope of the goals
+specified in the authorisation. This security need concerns confidential
+information, which should not be utilised for any other purposes other than the
+intended ones. To verify if there could be any violations of need-to-know,
+security analysis checks if the authorisee (or an actor that is not authorised
+by any authorised party) uses, modifies or produces the given information while
+achieving some goal different from the one it is authorised for. In a nutshell,
+it searches for need, modify, or produce relationships starting from goals
+different from the specified ones towards documents representing the given
+information.</span></p>
+
+<p class=Text><span lang=EN-US>Apart from the verification of violations of security
+needs, security analysis performs checks to verify that actors comply with
+their authorities. For this, it searches for eventual unauthorised passages of rights.
+For the time being, the following violations are detected:</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Pre-Analysis: Authority Violation:</span></b><span
+lang=EN-US> this task includes a set of checks that verify that no actor
+transfers rights to others in an unauthorised way.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Authority Violations</span></i><span
+lang=EN-US>: verifies whether a given actor transfer rights to others even when
+it does not have the authority to further delegate rights.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Unauthorised Delegation of Usage Violation</span></i><span
+lang=EN-US>: verifies whether a given actors transfer to other actors the right
+to use a given information, without having itself the right to do so.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Unauthorised Delegation of Modification
+violation</span></i><span lang=EN-US>: verifies whether a given actors transfer
+to other actors the right to modify a given information, without having itself
+the right to do so.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Unauthorised Delegation of Production
+violation</span></i><span lang=EN-US>: verifies whether a given actors transfer
+to other actors the right to modify a given information, without having itself
+the right to do so.</span></p>
+
+<p class=Text style='margin-left:31.65pt;text-indent:-31.65pt'><span
+lang=EN-US><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=EN-US>Unauthorised Delegation of Distribution
+violation</span></i><span lang=EN-US>: verifies whether a given actors transfer
+to other actors the right to distribute a given information, without having
+itself the right to do so.</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>Pre-Analysis: Business Violation: </span></b><span
+lang=EN-US>this task includes a set of checks that verify that there are no
+violations of organizational constraints. As far as organisational constraints
+are concerned, security analysis verifies that the specification of SoD and BoD
+constraints can be satisfied in the given model. </span></p>
+
+<p class=Text style='margin-left:36.0pt;text-indent:-36.0pt'><span lang=EN-US><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sod Violation: </span></p>
+
+<p class=Text style='margin-left:72.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Role-based: this violation is detected whenever
+a single actor plays both roles, among which an SoD constraint is expressed.
+Role-based SoD requires that no agent can play both roles, if it plays one of
+them. </span></p>
+
+<p class=Text style='margin-left:72.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Goal-based: this violation is detected whenever
+a single actor may perform both goals, between which an SoD constraint is
+expressed. Goal-based SoD requires that there is no actor performing both goals
+among which SoD is specified. To perform this verification, the analysis checks
+that the final performer of the given goals is not the same actor.</span></p>
+
+<p class=Text style='margin-left:36.0pt;text-indent:-36.0pt'><span lang=EN-US><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ii.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>BoD Violation: </span></p>
+
+<p class=Text style='margin-left:72.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Role-based: this violation is detected whenever
+there is no agent to play both roles, among which a BoD constraint is expressed.
+Role-based BoD requires that the same agent plays both roles, if it plays one
+of them.</span></p>
+
+<p class=Text style='margin-left:72.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>Goal-based: this violation is detected whenever
+a single actor may perform both goals, between which an SoD constraint is
+expressed. Goal-based SoD requires that there is no actor performing both goals
+among which SoD is specified. To perform this verification, the analysis checks
+that the final performer of the given goals is not the same actor.</span></p>
+
+<p class=Text><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<a id="RiskAnalysisAnchor" />
+<h2 style='margin-left:8.5pt;text-indent:-8.5pt'><a name="_Toc380051532"><span
+lang=EN-US>5.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Risk Analysis</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>STS-Tool can predict automatically the
+propagation of threats over a given diagram through the risk analysis. To launch
+a new risk analysis, click the “Analysis” menu and then “Risk Analysis” (</span><span lang=EN-GB>Figure 65</span><span lang=EN-US>). A wizard shows all the analysis
+result of the diagram; to start the analysis it is necessary to press “StartAnalysis”
+button (see </span><span lang=EN-GB>Figure 66</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=381 height=78 src="Help_image075.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341473678"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>65</span><span lang=EN-GB>: Run a new risk analysis</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=392 height=357 src="Help_image076.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref355604048"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>66</span><span lang=EN-GB>: Risk Analysis results</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>If you click on the Analysis Tab (see </span><span lang=EN-US>Figure 67</span><span lang=EN-US>) you see visualized the list of
+Warnings, Errors or the impact of the considered events. For every item, with a
+double click on it in the list, you can see exactly the point in the diagram
+where the problem occurs or the impact over different assets of a particular
+event.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=642 height=454 src="Help_image077.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref341473957">Figure </a>67: <span lang=EN-GB>Risk analysis details</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<a id="ChecksRiskAnalysisAnchor" />
+<h2 style='margin-left:8.5pt;text-indent:-8.5pt'><a name="_Toc380051533"><span
+lang=EN-US>5.6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Checks for Risk Analysis</span></a></h2>
+
+<p class=Text><span lang=EN-US>Risk analysis focuses on events threating goals
+or documents, and as such it propagates the effects over goal trees and
+goals/documents relationships internal to the actor (need, modify, produce), as
+well as social relationships involving goals and documents (goal delegation,
+document provision).</span><span lang=EN-GB> Therefore, starting from the
+specified threats we identify the impact of these threats over the rest of the
+diagram. </span><span lang=EN-US>The analysis starts with the known events, and
+propagates their impact over goal trees, documents and social relationships.
+The new discovered elements are treated as threated elements. The analysis ends
+when no new elements are found. The propagation rules are the following:</span></p>
+
+<p class=MsoBodyText style='margin-left:18.0pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>If an event threatens a <i>goal</i>, then: </span></p>
+
+<p class=MsoBodyText style='margin-left:38.65pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-GB>If the goal is an and-subgoal of some other
+goal, then the second goal is considered to be threatened;</span></p>
+
+<p class=MsoBodyText style='margin-left:38.65pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-GB>If the goal is delegated, then the threat is
+propagated to the goal of the delegator; </span></p>
+
+<p class=MsoBodyText style='margin-left:38.65pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-GB>If the goal produces a document, then the threat
+is propagated to the document too.</span></p>
+
+<p class=MsoBodyText style='margin-left:18.0pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>If an event threatens a <i>document</i>, then: </span></p>
+
+<p class=MsoBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-GB>If the document is needed to be used or modified
+by some goal, then the goal is considered to be threatened too;</span></p>
+
+<p class=MsoBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-GB>If the document is provided to some other actor,
+then the providee’s document is threatened too;</span></p>
+
+<p class=MsoBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-GB style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-GB>If the document is composed of other documents,
+then the threat is propagated to the parts of the document. </span></p>
+
+<b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="ReportAnchor" />
+<h1><a name="_Toc380051534"><span lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Creation of the Security Requirements Document</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-US>STS-Tool can generate automatically a
+security requirements document for the current STS project. The document
+provides a detailed description of the graphical socio-technical security
+requirements diagrams (Social, Information, Authorisation) drawn with the tool and
+lists the security requirements derived from them.</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US>To
+create a new document, click the “File” menu and then “Create Requirements
+Document” (</span><span lang=EN-GB><img width=256 height=127
+src="Help_image078.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Figure 68</span><span lang=EN-US>). A
+wizard will ask for the document title (a default name will appear), the name
+of the author, the name of the institution and the folder where the PDF file
+will be saved to (you can change the default folder with the browse button);
+then press “Next” (</span><span lang=EN-GB>Figure 69</span><span lang=EN-US>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref325391090"></a><a name="_Ref325379593"></a><a name="_Ref355604407"><span
+lang=EN-GB><img width=256 height=127 src="Help_image079.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>Figure
+</span><span lang=EN-GB>68</span><span lang=EN-GB>: <a name="_Ref325391068">Creating
+a new requirements</a></span><span lang=EN-GB> document</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'><img width=358 height=372 src="Help_image080.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref325379932"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>69</span><span lang=EN-GB>: Information required for a new report</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>You can select the information to include
+in the document by selecting items from the list shown in </span><span lang=EN-GB>Figure 70</span><span lang=EN-US>.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:10.0pt'><img width=430 height=470 src="Help_image081.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref325380217"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>70</span><span lang=EN-GB>: Report information choice</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>To
+complete the generation of the document, press “Finish”. Automatically, the
+document will be opened with your default PDF viewer.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-GB>&nbsp;</span></p>
+
+<b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="ThreatRepositoryAnchor" />
+<h1><a name="_Toc350875152"></a><a name="_Ref329783628"></a><a
+name="_Ref329778489"></a><a name="_Toc380051535"><span lang=EN-US>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Threat repository</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-GB>The STS-Tool contains a plug-in which
+integrates a user interface for importing threats into the STS diagram. The
+plug-in relies on the Threat repository bundle, which is packaged inside the
+plug-in along with its dependencies and is dynamically loaded when the
+application invokes the rest of the plug-in. The interface operations of the
+Threat repository support two-way interaction, however the STS plug-in only
+makes use of the threat listing/searching functionality (</span><span lang=EN-GB>Figure 71</span><span lang=EN-GB>).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US><img width=603 height=135 id="Picture 183" src="Help_image082.jpg"
+alt="Figure 89"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc350875292"></a><a name="_Ref353438221"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>71</span><span lang=EN-GB>: Connecting the STS-Tool to the Threat
+repository</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<a id="ConfigureThreatRepositoryAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051536"><span lang=EN-GB>7.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-GB>Configuring the Threat repository</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>Since the threat repository plugin requires
+an internet connection to connect to the server, it’s necessary to configure it
+before use.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>To configure the Threat repository plugin
+open the <i>preferences windows</i>, and select the <i>Threat Repository</i>
+section.</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=253 valign=top style='width:189.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+  width=148 height=68 src="Help_image083.jpg"></span></p>
+  <p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>Figure
+  </span><span lang=EN-GB>72</span><span lang=EN-GB>: Open the Preferences
+  Window</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+  </td>
+  <td width=404 valign=top style='width:303.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+  width=321 height=280 src="Help_image084.jpg"></span></p>
+  <p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>Figure
+  </span><span lang=EN-GB>73</span><span lang=EN-GB>: The Threat Repository
+  Preference section</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>Once selected, the Threat Repository
+preference page displays the configurable options.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The connection to the threat repository
+server, requires a username (email) and a password that can be obtained through
+a free registration on </span><a
+href="https://svrs.shields-project.eu/ANIKETOS/"><span lang=EN-US>https://svrs.shields-project.eu/ANIKETOS/</span></a><span
+lang=EN-US>. Once registered the access credentials must be entered here.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Moreover if your connection is behind a
+proxy server (ask more information to your network admin), you need to set it already
+here to be able to connect to the threat repository server, otherwise leave the
+fields blank.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Once done the configuration is over.</span></p>
+
+<a id="UseThreatRepositoryAnchor" />
+<h2 style='text-indent:0cm'><a name="_Toc380051537"><span lang=EN-GB>7.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-GB>Using the Threat repository’s search</span></a></h2>
+
+<p class=MsoNormal><span lang=EN-GB>In order to start the plug-in, either
+select the Event tool from the Palette (</span><span
+lang=EN-GB>Figure 74</span><span lang=EN-GB>) or select an existing event
+element in the diagram (should any be already modelled).</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;page-break-after:
+avoid'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc350875293"></a><a name="_Ref348720906"><span lang=EN-GB><img
+border=0 width=449 height=227 src="Help_image085.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>Figure
+</span><span lang=EN-GB>74</span><span lang=EN-GB>: Selection of the event from
+the Palette</span></p>
+
+<p class=MsoCaption><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>When this (or any other) event element is
+selected, a new tab with the label <i>Threat </i>will appear in the Properties
+view below the editor (</span><span lang=EN-GB>Figure 75</span> <span
+lang=EN-GB>and </span><span lang=EN-GB>Figure 76</span><span lang=EN-GB>).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB><img
+width=602 height=332 src="Help_image086.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref355610884"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>75</span><span lang=EN-GB>: Threat properties when an event is
+selected</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText style='page-break-after:avoid'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;page-break-after:
+avoid'><span lang=EN-US><img border=0 width=594 height=329 id="Picture 185"
+src="Help_image087.jpg" alt=threats2></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc350875294"></a><a name="_Ref347405480"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>76</span><span lang=EN-GB>: Switch to the Threat tab in Properties
+when an event is selected</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>A simple button, <i>import threat
+definition</i>, is by default shown on this tab (</span><span
+lang=EN-GB>Figure 77</span><span lang=EN-GB>). Clicking on the button triggers
+a dialog to be opened, which assists the user in re-using a predefined threat
+from the Threat repository.</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc350875295"></a><a name="_Ref347404681"><span lang=EN-GB><img
+border=0 width=550 height=299 src="Help_image088.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>Figure
+</span><span lang=EN-GB>77</span><span lang=EN-GB>: Invoke the dialog for
+importing a threat from the Threat repository</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>When the dialog is opened, the user will
+by default see an empty drop down menu, a blank search form, and a results list
+(</span><span lang=EN-GB>Figure 78: Threats search dialog</span><span
+lang=EN-GB>).</span></p>
+
+<p class=MsoCaption align=center style='text-align:center;page-break-after:
+avoid'><span lang=EN-US style='font-weight:normal'><img border=0 width=399
+height=466 src="Help_image089.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref379979158"></a><a name="_Ref380050372"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>78</span><span lang=EN-GB>: Threats search dialog</span><span
+lang=EN-GB> </span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>Entering a search filter (</span><span lang=EN-GB>Figure 79</span><span lang=EN-GB>) or selecting a <i>Business domain</i>
+(</span><span lang=EN-GB>Figure 80</span><span lang=EN-GB>) for threats is
+optional, and just clicking the <i>Search</i> button directly will download a
+complete list of all threats in the Threat repository (</span><span
+lang=EN-GB>Figure 81</span><span lang=EN-GB>). A progress bar on the bottom of
+the window will indicate any current search activity.</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=326 valign=top style='width:244.45pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=298 height=35 src="Help_image090.jpg"></p>
+  <p class=MsoCaption align=center style='text-align:center'><a
+  name="_Ref379979233"></a><a name="_Ref380050458"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>79</span><span lang=EN-GB>: Search through  “Business domain”</span></p>
+  </td>
+  <td width=326 valign=top style='width:244.45pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=298 height=35 src="Help_image091.jpg"></p>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  name="_Ref379979234"></a><a name="_Ref380050474"><b><span lang=EN-GB>Figure </span></b></a><b><span lang=EN-GB>80</span></b><b><span lang=EN-GB>: Search through a custom filter</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyText><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>In case an exception or an error is
+raised during execution of the plug-in, an error message will be displayed
+either in the upper white section of the dialog window or in a separate alert
+box.</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>When the search results are ready, they
+are presented in a list in the dialog (</span><span
+lang=EN-GB>Figure 81</span><span lang=EN-GB>). The list displays a scrolling
+pane and can be expanded with the window size, if more space is required.
+Selecting one of the results reveals some additional information in the
+placeholder below the list, including a description, the threat ID, and dates
+for creation and last update (if applicable). If any URLs to external resources
+are available, these are also listed here in the form of links.</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>The <i>finish </i>button on the bottom of
+the wizard is enabled once a successful selection has taken place.</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-GB><img
+border=0 width=311 height=383 src="Help_image092.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref379979249"></a><a name="_Toc350875297"></a><a name="_Ref347406970"><span
+lang=EN-GB>Figure </span></a><span lang=EN-GB>81</span><span lang=EN-GB>:
+Select the desired threat from the results list (arrow) and click Finish</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>Clicking the finish button will perform a
+validation on the uniqueness of the event name, which is a constraint imposed
+by the STS-Tool for all elements. This means that if a threat has already been
+imported into the diagram, the same event element should also be used in
+relationship with any other agents, goals, documents, or delegations that
+applies to.</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>If validation succeeds, the dialog window
+closes and the selected event element is instantly updated with the threat name
+from the selected threat. In addition, both the Description and Event ID
+properties of the element will receive the corresponding values from the
+selected threat (</span><span lang=EN-GB>Figure 82</span><span lang=EN-GB>).</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc350875298"></a><a name="_Ref347408134"><span lang=EN-GB><img
+border=0 width=559 height=287 src="Help_image093.jpg"></span></a></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-GB>Figure
+</span><span lang=EN-GB>82</span><span lang=EN-GB>: The element name is
+updated, along with the Description and Event ID properties</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>The name and description of an event can
+be edited freely as long as the Event ID is preserved. This ID is used for
+generating a link to the Aniketos SVRS web interface. The link becomes
+available in the Threats tab in Properties (</span><span
+lang=EN-GB>Figure 83</span><span lang=EN-GB>), and contains additional
+information on the threat, such as countermeasures. </span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;page-break-after:
+avoid'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText align=center style='text-align:center;page-break-after:
+avoid'><span lang=EN-US><img border=0 width=490 height=392
+src="Help_image094.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc350875299"></a><a name="_Ref347404047"><span lang=EN-GB>Figure </span></a><span lang=EN-GB>83</span><span lang=EN-GB>: The Threat tab contains a link to
+additional threat information (arrow), and a button for changing the threat
+(i.e. launching the wizard again)</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>If the threat as a whole needs to be
+changed or updated, the user can simply re-launch the threat definition import
+wizard by clicking the <i>Change threat definition </i>button in the Threat
+tab. If a particular threat has been updated in the Threat repository and not
+yet in the diagram, the designer can re-locate the threat by using the search
+functionality, select it and complete the wizard as already described above.</span></p>
+
+<p class=MsoBodyText><span lang=EN-GB>If the reference to the Threat repository
+needs to be removed entirely, go back in <i>Properties </i>view (</span><span lang=EN-GB>Figure 83</span><span lang=EN-GB>) to the Core tab and set the value
+of the Event ID property to an empty string. The Threat tab will then go back
+to the state shown in </span><span lang=EN-GB>Figure 77</span><span lang=EN-GB>.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="ShortcutAnchor" />
+<h1><a name="_Toc380051538"><span lang=EN-US>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Shortcut common tasks</span></a></h1>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>The
+following is a list of keyboard shortcuts that can be used when modeling with
+STS-Tool </span><span lang=EN-GB>(see </span><span
+lang=EN-US>Figure 84</span><span lang=EN-GB>)</span><span lang=EN-US>:</span></p>
+
+<p class=Text><span lang=EN-US>Shortcuts for the menu “File”:</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=PT-BR>CTRL+N – New diagram</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=PT-BR>CTRL +O – Open diagram</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>CTRL +S – Save the open diagram</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>CTRL +SHIFT+S – Save all the open diagram</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>CTRL +W – Close the open diagram </span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>CTRL</span><span lang=EN-GB> +SHIFT+W – </span><span
+lang=EN-US>Close all the open diagram</span></p>
+
+<p class=Text><span lang=EN-US style='line-height:107%'>&nbsp;</span></p>
+
+<p class=Text><span lang=EN-US style='line-height:107%'>Shortcuts for the menu
+“Diagram”:</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>CTRL +1 – Social View</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>CTRL +2 – Information View</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>CTRL +3 – Authorisation View</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>CTRL +E – Export to image</span></p>
+
+<p class=Text style='margin-left:18.0pt;text-indent:-18.0pt'><span lang=EN-US
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-GB>CTRL +R – Generate report</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB><img
+border=0 width=369 height=350 src="Help_image095.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref353439474">Figure </a>84: key assist information</p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman","serif"'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<a id="CompatibilityAnchor" />
+<h1><a name="_Toc380051539"><span lang=EN-US>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Backwards compatibility with version 1.1.x</span></a></h1>
+
+<p class=MsoNormal><span lang=EN-US>When you load a diagram created with the
+STS-Tool 1.1.x (1.1.0 or 1.1.1 or 1.1.2) an error occurs (see </span><span lang=EN-GB>Figure 85</span><span lang=EN-US>), since the metamodel has changed
+in terms of the security needs naming.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=404 height=143 src="Help_image096.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref327791352"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>85</span><span lang=EN-GB>: Error importing an old diagram with
+Security needs expressed</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>To cope with this problem, we have devised
+an import functionality to ensure backwards compatibility. In the File menu
+select import option: there is a function implemented to import only diagrams
+made with the STS-Tool version 1.1.x. (see</span><span lang=EN-US> </span><span lang=EN-GB>Figure 86</span><span lang=EN-GB>).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB><img
+border=0 width=402 height=316 src="Help_image097.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref330544797"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>86</span><span lang=EN-GB>: Import wizard information</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>You can choose if you want to overwrite
+(default = no) the original file, selecting “Overwrite the input File”  </span><span
+lang=EN-GB>(see </span><span lang=EN-GB>Figure 87</span><span lang=EN-GB>). To
+complete the import for the file, press the “Finish” button.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB><img
+border=0 width=426 height=335 src="Help_image098.jpg"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref330544779"><span lang=EN-GB>Figure </span></a><span
+lang=EN-GB>87</span><span lang=EN-GB>: Import wizard option “overwrite the
+input file”</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=Text><i><span lang=EN-GB>Remark</span></i><span lang=EN-GB>: some
+diagrams created with versions of the tool prior to 1.1.2 cannot be imported.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+</div>
+
+<div><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<div id=ftn1>
+
+<p class=MsoFootnoteText><a href="#_ftnref1" name="_ftn1" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>[1]</span></span></span></a>
+<a href="http://www.sts-tool.eu/Downloads.php"><span lang=FR>http://www.sts-tool.eu/Downloads.php</span></a></p>
+
+</div>
+
+<div id=ftn2>
+
+<p class=MsoFootnoteText><a href="#_ftnref2" name="_ftn2" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>[2]</span></span></span></a>
+<span lang=EN-US><a
+href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></span></p>
+
+</div>
+
+<div id=ftn3>
+
+<p class=MsoFootnoteText><a href="#_ftnref3" name="_ftn3" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>[3]</span></span></span></a>
+<a href="http://www.sts-tool.eu/Archive.php"><span lang=FR>http://www.sts-tool.eu/Archive.php</span></a></p>
+
+</div>
+
+<div id=ftn4>
+
+<p class=MsoFootnoteText><a href="#_ftnref4" name="_ftn4" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman","serif"'>[4]</span></span></span></a>
+<a href="http://www.sts-tool.eu/doc/STS-Modeling%20Language%20ver1.3.0.pdf"><span
+lang=EN-US>http://www.sts-tool.eu/doc/STS-Modeling Language ver1.3.0.pdf</span></a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

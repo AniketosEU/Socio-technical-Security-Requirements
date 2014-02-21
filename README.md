@@ -3,9 +3,7 @@ Socio-technical-Security-Requirements
 
 Short description
 -----------------
-Socio-technical-Security-Requirements Package consists in a software called STS-Tool, enriched with a plugin, called TRM (Thread Repository Module).
-
-STS-Tool (Socio-Technical Security modelling Tool) is a standalone application that enables the creation of security requirements models in STS-ml. STS-Tool supports the validation of a diagram via consistency analysis and security analysis.  The tool provides a feature for the automatic derivation of security requirements, threats propagation analysis and the generation of a security requirements document. STS-Tool is written in Java and is based on the Eclipse RCP Engine. The current version of STS-Tool (v1.3.3) is ready for public use.
+STS-Tool (Socio-Technical Security modelling Tool) is a standalone application that enables the creation of security requirements models in STS-ml. STS-Tool supports the validation of a diagram via consistency analysis and security analysis.  The tool provides a feature for the automatic derivation of security requirements, threats propagation analysis, the generation of a security requirements document and integrates a plug-in for utilising an online threat repository service. STS-Tool is written in Java and is based on the Eclipse RCP Engine. The current version of STS-Tool (v1.3.3) is ready for public use.
 
 Overview 
 --------
@@ -19,7 +17,7 @@ Moreover, it:
 	* consistency  analysis: well-formedness analysis of the STS-ml diagram designed 
 security analysis: verify (i) if the security requirements specification is consistent, that is, no requirements are potentially conflicting; (ii) if the diagram 	
 	* allows the satisfaction of the specified security requirements. ; 
-	* risk threats: identify threat propagation over actors’ assets
+	* threats analysis: identify threat propagation over actors’ assets
 
 In the Aniketos approach, STS-Tool is used to conduct security requirements engineering that precedes the design of secure service compositions.
 
@@ -61,8 +59,7 @@ STS-tool is developed by members Software Engineering and Formal Methods Group, 
 Lead developer: Mauro Poggianella
 Contributors: Paolo Giorgini, Elda Paja, Fabiano Dalpiaz
 
-TRM is developed by SINTEF ICT
-Lead developers: Erlend Andreas Gjære and Balazs Kiss
+Threat Repository service is provided by Search-Lab (lead Balazs Kiss), and made available in STS-Tool with the threats plug-in developed by SINTEF (Erlend Andreas Gjære).
 
 Official site, external resources
 ---------------------------------
